@@ -1,0 +1,47 @@
+import Image from "next/image";
+import { Badge } from "../badge";
+import { Button } from "../button";
+
+export const Hero = () => {
+  return (
+    <section className="relative overflow-hidden bg-[#2e4b89] text-white">
+      <div className="absolute inset-0 bg-gradient-to-r from-[#2e4b89]/90 to-[#2e4b89]/70"></div>
+      <div className="absolute inset-0">
+        <Image
+          src="/pharmaceuticsRepresentativePeople.png"
+          alt="Pharmaceutical representatives in a meeting"
+          width={1200}
+          height={600}
+          className="h-full w-full object-cover opacity-20"
+          priority
+        />
+      </div>
+      <div className="relative z-10 container mx-auto px-4 py-16 md:py-24 lg:py-32">
+        <div className="max-w-3xl">
+          <Badge className="mb-4 bg-[#d29531] hover:bg-[#d29531]/90">
+            Sindiprosan-ABC: Fortalecendo a categoria, garantindo seus direitos
+          </Badge>
+          <h1 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">
+            Unindo representantes farmacêuticos para um futuro melhor
+          </h1>
+          <p className="mb-8 text-lg text-white/90 md:text-xl">
+            Sindiprosan-ABC: Fortalecendo a categoria, garantindo seus direitos
+          </p>
+          <div className="flex flex-col gap-4 sm:flex-row">
+            <Button size="lg" className="bg-[#d29531] hover:bg-[#d29531]/90">
+              Fale Conosco
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-white text-white hover:bg-white hover:text-[#2e4b89]"
+            >
+              Saiba Mais
+            </Button>
+          </div>
+        </div>
+      </div>
+      <div className="absolute right-0 bottom-0 left-0 h-16 bg-gradient-to-t from-[#2e4b89] to-transparent"></div>
+    </section>
+  );
+};
