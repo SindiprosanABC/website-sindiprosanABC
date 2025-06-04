@@ -8,7 +8,6 @@ import { VacanciesJobs } from "@/components/sections/jobs-vacancies";
 import { LatestNews } from "@/components/sections/latestNews";
 import { MemberBenefits } from "@/components/sections/memberBenefits";
 import { Stats } from "@/components/sections/stats";
-import Image from "next/image";
 
 export default function Home() {
   return (
