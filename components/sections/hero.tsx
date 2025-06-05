@@ -17,7 +17,7 @@ export const Hero = () => {
           priority
         />
       </div>
-      <div className="3xl:py-72 4xl:py-96 relative z-10 container mx-auto px-4 py-32 xl:py-52 2xl:py-64">
+      <div className="3xl:py-72 4xl:py-96 relative z-10 container mx-auto px-4 py-40 xl:py-52 2xl:py-64">
         <div className="max-w-3xl">
           <Badge className="mb-4 bg-[#d29531] hover:bg-[#d29531]/90">
             Sindiprosan-ABC - Fortalecendo a categoria e garantindo seus
