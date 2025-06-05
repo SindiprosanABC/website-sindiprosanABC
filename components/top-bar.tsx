@@ -10,23 +10,16 @@ export const TopBar = () => {
           className="flex items-center gap-1 transition-colors hover:text-[#d29531]"
         >
           <Phone className="h-3 w-3" />
-          <span className="hidden sm:inline">1-800-555-0123</span>
+          <span className="hidden sm:inline">(13) 3221-2796</span>
         </Link>
         <Link
           href="/contact"
           className="flex items-center gap-1 transition-colors hover:text-[#d29531]"
         >
           <Mail className="h-3 w-3" />
-          <span className="hidden sm:inline">contact@pharmareps.org</span>
-        </Link>
-      </div>
-      <div className="flex items-center gap-4">
-        <Link
-          href="/member-login"
-          className="flex items-center gap-1 transition-colors hover:text-[#d29531]"
-        >
-          <User className="h-3 w-3" />
-          <span>Member Login</span>
+          <span className="hidden sm:inline">
+            sindiprosan-abc@sindiprosan-abc.org.br
+          </span>
         </Link>
       </div>
     </div>

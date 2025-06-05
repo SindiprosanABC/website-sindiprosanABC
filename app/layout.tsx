@@ -7,9 +7,9 @@ import { Navbar } from "@/components/sections/navbar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "PharmReps Union - Pharmaceutical Sales Representatives Union",
+  title: "SindiprosanABC - Fortalecendo a categoria farmacêutica",
   description:
-    "The leading union dedicated to protecting the rights, advancing the careers, and enhancing the well-being of pharmaceutical sales professionals.",
+    "A defesa dos Propagandistas, Propagandistas Vendedores e Vendedores de Produtos Farmacêuticos no ABC, Baixada Santista e litoral",
 };
 
 export default function RootLayout({

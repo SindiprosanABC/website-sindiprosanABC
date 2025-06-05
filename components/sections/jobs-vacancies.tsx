@@ -9,25 +9,26 @@ import { Button } from "../button";
 
 export const VacanciesJobs = () => {
   return (
-    <section className="bg-white py-16">
+    <section id="education" className="bg-white py-24">
       <div className="container mx-auto px-4">
         <div className="mb-12 text-center">
           <Badge className="mb-2 bg-[#d29531] hover:bg-[#d29531]/90">
             Career Opportunities
           </Badge>
           <h2 className="mb-4 text-3xl font-bold text-[#2e4b89]">
-            Latest Job Vacancies
+            Vagas no Ramo
           </h2>
           <p className="mx-auto max-w-2xl text-gray-600">
-            Explore the latest pharmaceutical sales representative positions
-            from top companies in the industry.
+            Explore as principais vagas em aberto das principais empresas do
+            setor na região Baixada Santista e ABC.
           </p>
         </div>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {/* Job Vacancy 1 */}
           <a
-            href="https://example.com/job1"
+            href="https://www.jobatus.com.br/vaga-emprego/propagandista-litoral-sul-sp-527016135?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic
+"
             target="_blank"
             rel="noopener noreferrer"
             className="group block"
@@ -64,9 +65,6 @@ export const VacanciesJobs = () => {
                 in the Chicago metropolitan area.
               </p>
               <div className="mt-auto flex items-center justify-between">
-                <span className="font-semibold text-[#2e4b89]">
-                  $85K - $110K
-                </span>
                 <span className="flex items-center gap-1 text-[#d29531] group-hover:underline">
                   View Details <ExternalLink className="h-4 w-4" />
                 </span>
@@ -76,7 +74,8 @@ export const VacanciesJobs = () => {
 
           {/* Job Vacancy 2 */}
           <a
-            href="https://example.com/job2"
+            href="https://br.whatjobs.com/gfj/303351155?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic
+"
             target="_blank"
             rel="noopener noreferrer"
             className="group block"
@@ -108,9 +107,6 @@ export const VacanciesJobs = () => {
                 for our oncology portfolio.
               </p>
               <div className="mt-auto flex items-center justify-between">
-                <span className="font-semibold text-[#2e4b89]">
-                  $120K - $150K
-                </span>
                 <span className="flex items-center gap-1 text-[#d29531] group-hover:underline">
                   View Details <ExternalLink className="h-4 w-4" />
                 </span>
@@ -120,7 +116,8 @@ export const VacanciesJobs = () => {
 
           {/* Job Vacancy 3 */}
           <a
-            href="https://example.com/job3"
+            href="https://br.whatjobs.com/gfj/305514700?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic
+"
             target="_blank"
             rel="noopener noreferrer"
             className="group block"
@@ -157,9 +154,6 @@ export const VacanciesJobs = () => {
                 physicians.
               </p>
               <div className="mt-auto flex items-center justify-between">
-                <span className="font-semibold text-[#2e4b89]">
-                  $90K - $115K
-                </span>
                 <span className="flex items-center gap-1 text-[#d29531] group-hover:underline">
                   View Details <ExternalLink className="h-4 w-4" />
                 </span>
@@ -169,7 +163,8 @@ export const VacanciesJobs = () => {
 
           {/* Job Vacancy 4 */}
           <a
-            href="https://example.com/job4"
+            href="https://br.whatjobs.com/gfj/305130646?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic
+"
             target="_blank"
             rel="noopener noreferrer"
             className="group block"
@@ -201,9 +196,6 @@ export const VacanciesJobs = () => {
                 training provided.
               </p>
               <div className="mt-auto flex items-center justify-between">
-                <span className="font-semibold text-[#2e4b89]">
-                  $60K - $75K
-                </span>
                 <span className="flex items-center gap-1 text-[#d29531] group-hover:underline">
                   View Details <ExternalLink className="h-4 w-4" />
                 </span>
@@ -213,7 +205,8 @@ export const VacanciesJobs = () => {
 
           {/* Job Vacancy 5 */}
           <a
-            href="https://example.com/job5"
+            href="https://br.whatjobs.com/gfj/305263912?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic 
+"
             target="_blank"
             rel="noopener noreferrer"
             className="group block"
@@ -245,9 +238,6 @@ export const VacanciesJobs = () => {
                 scientific background required.
               </p>
               <div className="mt-auto flex items-center justify-between">
-                <span className="font-semibold text-[#2e4b89]">
-                  $130K - $160K
-                </span>
                 <span className="flex items-center gap-1 text-[#d29531] group-hover:underline">
                   View Details <ExternalLink className="h-4 w-4" />
                 </span>
@@ -257,7 +247,7 @@ export const VacanciesJobs = () => {
 
           {/* Job Vacancy 6 */}
           <a
-            href="https://example.com/job6"
+            href="https://br.whatjobs.com/gfj/305130646?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
             target="_blank"
             rel="noopener noreferrer"
             className="group block"
@@ -294,21 +284,12 @@ export const VacanciesJobs = () => {
                 with hospital formularies preferred.
               </p>
               <div className="mt-auto flex items-center justify-between">
-                <span className="font-semibold text-[#2e4b89]">
-                  $95K - $125K
-                </span>
                 <span className="flex items-center gap-1 text-[#d29531] group-hover:underline">
                   View Details <ExternalLink className="h-4 w-4" />
                 </span>
               </div>
             </div>
           </a>
-        </div>
-
-        <div className="mt-12 text-center">
-          <Button className="bg-[#d29531] hover:bg-[#d29531]/90">
-            View All Job Openings
-          </Button>
         </div>
       </div>
     </section>

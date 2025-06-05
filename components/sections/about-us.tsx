@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const AboutUs = () => {
   return (
-    <section className="bg-white py-16">
+    <section id="about" className="bg-white py-28">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2">
           {/* Image Side */}
@@ -21,7 +21,8 @@ export const AboutUs = () => {
           {/* Content Side */}
           <div className="rounded-lg bg-[#2e4b89] p-8 text-white lg:p-12">
             <h2 className="mb-6 text-3xl font-bold lg:text-4xl">
-              What <span className="text-[#d29531]">PharmReps Union</span> Does
+              Entenda mais sobre o{" "}
+              <span className="text-[#d29531]">Sindiprosan-ABC</span>
             </h2>
             <p className="mb-6 text-lg leading-relaxed">
               O Sindiprosan-ABC atua como a voz oficial dos Propagandistas,
@@ -40,7 +41,7 @@ export const AboutUs = () => {
 
             <div>
               <h3 className="mb-6 text-xl font-bold text-[#d29531]">
-                Areas of Focus:
+                Nossas áreas
               </h3>
               <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                 <div className="flex items-center gap-3 rounded-lg border border-[#d29531]/20 bg-[#2e4b89]/50 p-3">
@@ -57,8 +58,59 @@ export const AboutUs = () => {
                       />
                     </svg>
                   </div>
+                  <span className="font-medium">Certificação profissional</span>
+                </div>
+
+                <div className="flex items-center gap-3 rounded-lg border border-[#d29531]/20 bg-[#2e4b89]/50 p-3">
+                  <div className="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#d29531]">
+                    <svg
+                      className="h-3 w-3 text-white"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                  <span className="font-medium">Assuntos regulatórios</span>
+                </div>
+
+                <div className="flex items-center gap-3 rounded-lg border border-[#d29531]/20 bg-[#2e4b89]/50 p-3">
+                  <div className="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#d29531]">
+                    <svg
+                      className="h-3 w-3 text-white"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                  <span className="font-medium">Suporte técnico</span>
+                </div>
+
+                <div className="flex items-center gap-3 rounded-lg border border-[#d29531]/20 bg-[#2e4b89]/50 p-3">
+                  <div className="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#d29531]">
+                    <svg
+                      className="h-3 w-3 text-white"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </div>
                   <span className="font-medium">
-                    Professional Certification
+                    Inovação e desenvolvimento
                   </span>
                 </div>
 
@@ -76,7 +128,7 @@ export const AboutUs = () => {
                       />
                     </svg>
                   </div>
-                  <span className="font-medium">Regulatory Affairs</span>
+                  <span className="font-medium">Suporte a negócios</span>
                 </div>
 
                 <div className="flex items-center gap-3 rounded-lg border border-[#d29531]/20 bg-[#2e4b89]/50 p-3">
@@ -93,58 +145,7 @@ export const AboutUs = () => {
                       />
                     </svg>
                   </div>
-                  <span className="font-medium">Technical Support</span>
-                </div>
-
-                <div className="flex items-center gap-3 rounded-lg border border-[#d29531]/20 bg-[#2e4b89]/50 p-3">
-                  <div className="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#d29531]">
-                    <svg
-                      className="h-3 w-3 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </div>
-                  <span className="font-medium">Innovation & Development</span>
-                </div>
-
-                <div className="flex items-center gap-3 rounded-lg border border-[#d29531]/20 bg-[#2e4b89]/50 p-3">
-                  <div className="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#d29531]">
-                    <svg
-                      className="h-3 w-3 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </div>
-                  <span className="font-medium">Business Support</span>
-                </div>
-
-                <div className="flex items-center gap-3 rounded-lg border border-[#d29531]/20 bg-[#2e4b89]/50 p-3">
-                  <div className="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#d29531]">
-                    <svg
-                      className="h-3 w-3 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </div>
-                  <span className="font-medium">Labor Relations</span>
+                  <span className="font-medium">Relações de trabalho</span>
                 </div>
               </div>
             </div>

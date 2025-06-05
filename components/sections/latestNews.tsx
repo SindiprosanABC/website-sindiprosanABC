@@ -13,54 +13,57 @@ import { ArrowRight } from "lucide-react";
 
 export const LatestNews = () => {
   return (
-    <section className="bg-gray-50 py-16">
+    <section id="news" className="bg-gray-50 py-24">
       <div className="container mx-auto px-4">
         <div className="mb-12 flex flex-col items-start justify-between md:flex-row md:items-center">
           <div>
             <Badge className="mb-2 bg-[#d29531] hover:bg-[#d29531]/90">
-              Stay Informed
+              Notícias
             </Badge>
             <h2 className="text-3xl font-bold text-[#2e4b89]">
-              Latest News & Updates
+              Últimas notícias e atualizações
             </h2>
           </div>
-          <Button
+          {/* <Button
             variant="link"
             className="flex h-auto items-center gap-1 p-0 text-[#2e4b89] hover:text-[#d29531]"
           >
             View All News <ArrowRight className="h-4 w-4" />
-          </Button>
+          </Button> */}
         </div>
 
         <Carousel className="w-full">
           <CarouselContent>
             <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-              <Card>
-                <div className="relative h-48 w-full overflow-hidden rounded-t-lg">
+              <Card className="pt-0">
+                <div className="relative h-52 w-full overflow-hidden rounded-t-lg">
                   <Image
-                    src="/placeholder.svg?height=300&width=500"
+                    src="/industry-notice.jpg"
                     alt="Industry conference"
                     width={500}
                     height={300}
-                    className="h-full w-full object-cover"
+                    className="h-full w-full"
                   />
                 </div>
                 <CardHeader>
                   <div className="mb-2 flex items-center justify-between">
                     <Badge variant="outline" className="text-[#2e4b89]">
-                      Industry News
+                      Notícias da indústria
                     </Badge>
-                    <span className="text-sm text-gray-500">May 15, 2025</span>
+                    <span className="text-sm text-gray-500">
+                      15 de Maio, 2025
+                    </span>
                   </div>
                   <CardTitle className="text-[#2e4b89]">
-                    New Legislation Impacts Pharmaceutical Sales Representatives
+                    Nova legislação afeta representantes de vendas farmacêuticas
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="line-clamp-3 text-gray-600">
-                    Recent legislative changes will affect how pharmaceutical
-                    sales representatives interact with healthcare providers.
-                    Our union is actively working to address these changes.
+                    Mudanças legislativas recentes afetarão como os
+                    representantes de vendas farmacêuticas interagem com os
+                    prestadores de serviços de saúde. Nosso motivo é trabalhar
+                    duro para que essas mudanças acontecam
                   </p>
                 </CardContent>
                 <CardFooter>
@@ -68,17 +71,17 @@ export const LatestNews = () => {
                     variant="link"
                     className="h-auto p-0 text-[#d29531] hover:text-[#d29531]/80"
                   >
-                    Read More
+                    Saiba mais
                   </Button>
                 </CardFooter>
               </Card>
             </CarouselItem>
 
             <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-              <Card>
-                <div className="relative h-48 w-full overflow-hidden rounded-t-lg">
+              <Card className="pt-0">
+                <div className="relative h-52 w-full overflow-hidden rounded-t-lg">
                   <Image
-                    src="/placeholder.svg?height=300&width=500"
+                    src="/union-meeting.jpg"
                     alt="Union meeting"
                     width={500}
                     height={300}
@@ -88,19 +91,21 @@ export const LatestNews = () => {
                 <CardHeader>
                   <div className="mb-2 flex items-center justify-between">
                     <Badge variant="outline" className="text-[#2e4b89]">
-                      Union Update
+                      notícias da União
                     </Badge>
-                    <span className="text-sm text-gray-500">May 10, 2025</span>
+                    <span className="text-sm text-gray-500">
+                      10 de Maio, 2025
+                    </span>
                   </div>
                   <CardTitle className="text-[#2e4b89]">
-                    Annual Union Conference Scheduled for September
+                    Conferência Anual da União agendada para setembro
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="line-clamp-3 text-gray-600">
-                    Mark your calendars for our annual conference, featuring
-                    keynote speakers, workshops, and networking opportunities
-                    for all members.
+                    Marque seus calendários para nossa conferência anual,
+                    apresentando palestrantes, oficinas e oportunidades de
+                    networking para todos os membros.
                   </p>
                 </CardContent>
                 <CardFooter>
@@ -108,17 +113,17 @@ export const LatestNews = () => {
                     variant="link"
                     className="h-auto p-0 text-[#d29531] hover:text-[#d29531]/80"
                   >
-                    Read More
+                    Saiba mais
                   </Button>
                 </CardFooter>
               </Card>
             </CarouselItem>
 
             <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-              <Card>
-                <div className="relative h-48 w-full overflow-hidden rounded-t-lg">
+              <Card className="pt-0">
+                <div className="relative h-52 w-full overflow-hidden rounded-t-lg">
                   <Image
-                    src="/placeholder.svg?height=300&width=500"
+                    src="/member-sale.jpg"
                     alt="Healthcare professionals"
                     width={500}
                     height={300}
@@ -128,19 +133,22 @@ export const LatestNews = () => {
                 <CardHeader>
                   <div className="mb-2 flex items-center justify-between">
                     <Badge variant="outline" className="text-[#2e4b89]">
-                      Member Spotlight
+                      Membro Spotlight
                     </Badge>
-                    <span className="text-sm text-gray-500">May 5, 2025</span>
+                    <span className="text-sm text-gray-500">
+                      % de Maio, 2025
+                    </span>
                   </div>
                   <CardTitle className="text-[#2e4b89]">
-                    Member Success Story: Breaking Sales Records
+                    História de sucesso de um membro - quebrando recorde de
+                    vendas
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="line-clamp-3 text-gray-600">
-                    Read about how union member Jane Smith utilized our
-                    resources to achieve record-breaking sales numbers in her
-                    territory.
+                    Leia sobre como Jane Smith, membro da União, utilizou nosso
+                    Recursos para alcançar números de vendas recorde em ela
+                    território.
                   </p>
                 </CardContent>
                 <CardFooter>
@@ -148,17 +156,17 @@ export const LatestNews = () => {
                     variant="link"
                     className="h-auto p-0 text-[#d29531] hover:text-[#d29531]/80"
                   >
-                    Read More
+                    Saiba mais
                   </Button>
                 </CardFooter>
               </Card>
             </CarouselItem>
 
             <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-              <Card>
-                <div className="relative h-48 w-full overflow-hidden rounded-t-lg">
+              <Card className="pt-0">
+                <div className="relative h-52 w-full overflow-hidden rounded-t-lg">
                   <Image
-                    src="/placeholder.svg?height=300&width=500"
+                    src="/marketing-digital.jpg"
                     alt="Digital marketing"
                     width={500}
                     height={300}
@@ -168,18 +176,20 @@ export const LatestNews = () => {
                 <CardHeader>
                   <div className="mb-2 flex items-center justify-between">
                     <Badge variant="outline" className="text-[#2e4b89]">
-                      Industry Trends
+                      Notícias da indústria
                     </Badge>
-                    <span className="text-sm text-gray-500">May 1, 2025</span>
+                    <span className="text-sm text-gray-500">
+                      1 de Maio, 2025
+                    </span>
                   </div>
                   <CardTitle className="text-[#2e4b89]">
-                    Digital Transformation in Pharmaceutical Sales
+                    Transformção digital em vendas farmacêuticas
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="line-clamp-3 text-gray-600">
-                    Explore how digital tools are changing the landscape of
-                    pharmaceutical sales and how representatives can adapt.
+                    Explore como ferramentas digitais podem mudar o mercado de
+                    vendas farmacêuticas e como podemos nos adaptar
                   </p>
                 </CardContent>
                 <CardFooter>
@@ -187,7 +197,7 @@ export const LatestNews = () => {
                     variant="link"
                     className="h-auto p-0 text-[#d29531] hover:text-[#d29531]/80"
                   >
-                    Read More
+                    Saiba mais
                   </Button>
                 </CardFooter>
               </Card>

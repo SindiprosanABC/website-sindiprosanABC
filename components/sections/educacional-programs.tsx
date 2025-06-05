@@ -6,7 +6,7 @@ import { Button } from "../button";
 
 export const EducationalPrograms = () => {
   return (
-    <section className="bg-gray-50 py-16">
+    <section className="bg-gray-50 py-24">
       <div className="container mx-auto px-4">
         <div className="mb-12 text-center">
           <Badge className="mb-2 bg-[#d29531] hover:bg-[#d29531]/90">
@@ -23,8 +23,8 @@ export const EducationalPrograms = () => {
 
         <Tabs defaultValue="upcoming" className="w-full">
           <TabsList className="mx-auto mb-8 grid w-full max-w-md grid-cols-2">
-            <TabsTrigger value="upcoming">Upcoming Programs</TabsTrigger>
-            <TabsTrigger value="popular">Popular Courses</TabsTrigger>
+            <TabsTrigger value="upcoming">Programas futuros</TabsTrigger>
+            <TabsTrigger value="popular">Cursos Populares</TabsTrigger>
           </TabsList>
 
           <TabsContent value="upcoming">
@@ -32,7 +32,7 @@ export const EducationalPrograms = () => {
               <Card>
                 <CardHeader className="pb-2">
                   <Badge className="mb-2 w-fit bg-[#2e4b89] hover:bg-[#2e4b89]/90">
-                    June 15, 2025
+                    A definir
                   </Badge>
                   <CardTitle className="text-[#2e4b89]">
                     Inteligência Artificial para Propagandistas
@@ -40,7 +40,7 @@ export const EducationalPrograms = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="mb-4 text-gray-600">
-                    Inteligência Artificial para Propagandistas
+                    Aprenda como melhor seu desempenho utilizando IA Generativa
                   </p>
                   <div className="mb-4 flex items-center text-sm text-gray-500">
                     <Calendar className="mr-2 h-4 w-4" />
@@ -65,7 +65,8 @@ export const EducationalPrograms = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="mb-4 text-gray-600">
-                    Neurociência para Negócios
+                    Aprenda como utilizer neurociencia para ter foco em
+                    Persuasão e Tomada de Decisão
                   </p>
                   <div className="mb-4 flex items-center text-sm text-gray-500">
                     <Calendar className="mr-2 h-4 w-4" />
@@ -112,25 +113,25 @@ export const EducationalPrograms = () => {
               <Card>
                 <CardHeader className="pb-2">
                   <Badge className="mb-2 w-fit bg-[#2e4b89] hover:bg-[#2e4b89]/90">
-                    On-Demand
+                    Sob demanda
                   </Badge>
                   <CardTitle className="text-[#2e4b89]">
-                    Effective Communication with Healthcare Providers
+                    Comunicação efetiva com colaboradores da saúde
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="mb-4 text-gray-600">
-                    Develop strategies for building strong relationships with
-                    doctors and healthcare facilities.
+                    Desenvolva estratégias para construir importantes
+                    relacionamentos com Médicos e colaboradores da saúde
                   </p>
                   <div className="mb-4 flex items-center text-sm text-gray-500">
                     <Calendar className="mr-2 h-4 w-4" />
-                    <span>Self-Paced | 10 Hours</span>
+                    <span>No seu ritmo | 10 Horas</span>
                   </div>
                 </CardContent>
                 <CardFooter>
                   <Button className="w-full bg-[#d29531] hover:bg-[#d29531]/90">
-                    Enroll Now
+                    Em breve
                   </Button>
                 </CardFooter>
               </Card>
@@ -138,25 +139,25 @@ export const EducationalPrograms = () => {
               <Card>
                 <CardHeader className="pb-2">
                   <Badge className="mb-2 w-fit bg-[#2e4b89] hover:bg-[#2e4b89]/90">
-                    On-Demand
+                    Sob demanda
                   </Badge>
                   <CardTitle className="text-[#2e4b89]">
-                    Understanding Clinical Data for Sales Professionals
+                    Entendendo dados clínicos para profissionais de vendas
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="mb-4 text-gray-600">
-                    Learn how to interpret and effectively communicate clinical
-                    trial data to healthcare providers.
+                    Aprenda a interpretar e comunicar efetivamente dados de
+                    ensaios clínicos aos profissionais de saúde
                   </p>
                   <div className="mb-4 flex items-center text-sm text-gray-500">
                     <Calendar className="mr-2 h-4 w-4" />
-                    <span>Self-Paced | 8 Hours</span>
+                    <span>No seu ritmo | 8 Horas</span>
                   </div>
                 </CardContent>
                 <CardFooter>
                   <Button className="w-full bg-[#d29531] hover:bg-[#d29531]/90">
-                    Enroll Now
+                    Em breve
                   </Button>
                 </CardFooter>
               </Card>
@@ -164,40 +165,31 @@ export const EducationalPrograms = () => {
               <Card>
                 <CardHeader className="pb-2">
                   <Badge className="mb-2 w-fit bg-[#2e4b89] hover:bg-[#2e4b89]/90">
-                    On-Demand
+                    Sob demanda
                   </Badge>
                   <CardTitle className="text-[#2e4b89]">
-                    Negotiation Skills for Pharmaceutical Sales
+                    Habilidades de negociação para vendas farmacêuticas
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="mb-4 text-gray-600">
-                    Master the art of negotiation to secure better contracts and
-                    deals in the pharmaceutical industry.
+                    Domine a arte da negociação para garantir melhores contratos
+                    e negócios na indústria farmacêutica.
                   </p>
                   <div className="mb-4 flex items-center text-sm text-gray-500">
                     <Calendar className="mr-2 h-4 w-4" />
-                    <span>Self-Paced | 6 Hours</span>
+                    <span>No seu ritmo | 6 Horas</span>
                   </div>
                 </CardContent>
                 <CardFooter>
                   <Button className="w-full bg-[#d29531] hover:bg-[#d29531]/90">
-                    Enroll Now
+                    Em breve
                   </Button>
                 </CardFooter>
               </Card>
             </div>
           </TabsContent>
         </Tabs>
-
-        <div className="mt-12 text-center">
-          <Button
-            variant="outline"
-            className="border-[#2e4b89] text-[#2e4b89] hover:bg-[#2e4b89] hover:text-white"
-          >
-            View All Programs
-          </Button>
-        </div>
       </div>
     </section>
   );

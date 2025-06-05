@@ -2,30 +2,29 @@ import Link from "next/link";
 import { Button } from "../button";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { Input } from "../ui/input";
+import Image from "next/image";
 
 export const Footer = () => {
   return (
     <footer className="bg-gray-900 pt-16 pb-8 text-white">
       <div className="container mx-auto px-4">
-        <div className="mb-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mb-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-10">
           <div>
-            <Link href="/" className="mb-6 flex items-center gap-2">
-              <div className="relative h-10 w-10">
-                <div className="absolute inset-0 rounded-full bg-[#d29531]"></div>
-                <div className="absolute inset-[3px] flex items-center justify-center rounded-full bg-gray-900">
-                  <div className="h-6 w-6 rounded-full bg-white"></div>
-                </div>
-              </div>
-              <div>
-                <h3 className="text-lg font-bold text-white">PharmReps</h3>
-                <p className="-mt-1 text-xs font-medium text-[#d29531]">
-                  UNION
-                </p>
+            <Link href="/" className="flex items-center gap-2">
+              <div className="relative flex h-20 w-20 items-center justify-center md:h-24 md:w-24">
+                <Image
+                  src={"/sind-branco.png"}
+                  alt="logo SindiprosanABC"
+                  width={600}
+                  height={311}
+                  className="w-full"
+                />
               </div>
             </Link>
             <p className="mb-6 text-gray-400">
-              Advocating for the rights and professional development of
-              pharmaceutical sales representatives since 1995.
+              Advogando os direitos e o desenvolvimento profissional de
+              representantes de vendas farmacêuticas desde 1995. Facebook
+              Twitter Instagram.
             </p>
             <div className="flex gap-4">
               <Button
@@ -124,151 +123,70 @@ export const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <Link
-                  href="/about"
+                  href="/#about"
                   className="text-gray-400 transition-colors hover:text-[#d29531]"
                 >
-                  About Us
+                  Sobre Nós
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/benefits"
+                  href="/#benefits"
                   className="text-gray-400 transition-colors hover:text-[#d29531]"
                 >
-                  Member Benefits
+                  Benefícios
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/education"
+                  href="/#education"
                   className="text-gray-400 transition-colors hover:text-[#d29531]"
                 >
-                  Education & Training
+                  Educação
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/advocacy"
+                  href="/#news"
                   className="text-gray-400 transition-colors hover:text-[#d29531]"
                 >
-                  Advocacy
+                  Notícias
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/events"
+                  href="/#contact"
                   className="text-gray-400 transition-colors hover:text-[#d29531]"
                 >
-                  Events
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/news"
-                  className="text-gray-400 transition-colors hover:text-[#d29531]"
-                >
-                  News & Updates
+                  Contato
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="mb-6 text-lg font-bold">Member Resources</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link
-                  href="/member-login"
-                  className="text-gray-400 transition-colors hover:text-[#d29531]"
-                >
-                  Member Login
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/resources"
-                  className="text-gray-400 transition-colors hover:text-[#d29531]"
-                >
-                  Resource Library
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/forums"
-                  className="text-gray-400 transition-colors hover:text-[#d29531]"
-                >
-                  Member Forums
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/job-board"
-                  className="text-gray-400 transition-colors hover:text-[#d29531]"
-                >
-                  Job Board
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/faq"
-                  className="text-gray-400 transition-colors hover:text-[#d29531]"
-                >
-                  FAQs
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/support"
-                  className="text-gray-400 transition-colors hover:text-[#d29531]"
-                >
-                  Support Center
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="mb-6 text-lg font-bold">Contact Us</h3>
+            <h3 className="mb-6 text-lg font-bold">Informações de contato</h3>
             <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-[#d29531]" />
-                <span className="text-gray-400">
-                  123 Union Avenue, Suite 500
-                  <br />
-                  Chicago, IL 60601
-                </span>
-              </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-5 w-5 shrink-0 text-[#d29531]" />
-                <span className="text-gray-400">1-800-555-0123</span>
+                <span className="text-gray-400">(13) 3221-2796</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 shrink-0 text-[#d29531]" />
-                <span className="text-gray-400">contact@pharmareps.org</span>
+                <span className="text-gray-400">
+                  sindiprosan-abc@sindiprosan-abc.org.br
+                </span>
               </li>
             </ul>
-            <div className="mt-6">
-              <h4 className="mb-3 font-medium">Subscribe to our newsletter</h4>
-              <div className="flex gap-2">
-                <Input
-                  placeholder="Your email"
-                  className="border-gray-700 bg-gray-800"
-                />
-                <Button className="bg-[#d29531] hover:bg-[#d29531]/90">
-                  Subscribe
-                </Button>
-              </div>
-            </div>
           </div>
         </div>
 
         <div className="border-t border-gray-800 pt-8">
-          <div className="flex flex-col items-center justify-between md:flex-row">
+          <div className="flex flex-col items-center justify-center md:flex-row">
             <p className="mb-4 text-sm text-gray-500 md:mb-0">
-              © 2025 Pharmaceutical Sales Representatives Union. All rights
-              reserved.
+              © 2025 SindiprosanABC - Todos os direitos reservados.
             </p>
-            <div className="flex gap-4">
+            {/* <div className="flex gap-4">
               <Link
                 href="/privacy"
                 className="text-sm text-gray-500 transition-colors hover:text-[#d29531]"
@@ -287,7 +205,7 @@ export const Footer = () => {
               >
                 Sitemap
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

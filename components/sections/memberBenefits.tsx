@@ -5,18 +5,18 @@ import { Button } from "../button";
 
 export const MemberBenefits = () => {
   return (
-    <section className="bg-gray-50 py-16">
+    <section id="benefits" className="bg-gray-50 py-24">
       <div className="container mx-auto px-4">
         <div className="mb-12 text-center">
           <Badge className="mb-2 bg-[#d29531] hover:bg-[#d29531]/90">
-            Why Join Us
+            Por que se juntar a nós ?
           </Badge>
           <h2 className="mb-4 text-3xl font-bold text-[#2e4b89]">
-            Member Benefits
+            Benefício dos associados
           </h2>
           <p className="mx-auto max-w-2xl text-gray-600">
-            Our union provides comprehensive benefits designed specifically for
-            pharmaceutical sales representatives.
+            O Sindiprosan-ABC está a sua disposição para auxiliar em todos os
+            momentos de sua carreira
           </p>
         </div>
 
@@ -27,33 +27,27 @@ export const MemberBenefits = () => {
                 <BarChart2 className="h-6 w-6 text-[#2e4b89]" />
               </div>
               <CardTitle className="text-[#2e4b89]">
-                Career Development
+                Desenvolvimento de Carreira
               </CardTitle>
             </CardHeader>
             <CardContent>
               <ul className="space-y-2 text-gray-600">
                 <li className="flex items-start gap-2">
                   <ChevronRight className="mt-0.5 h-5 w-5 shrink-0 text-[#d29531]" />
-                  <span>Professional certification programs</span>
+                  <span>Programas de certificação profissional</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <ChevronRight className="mt-0.5 h-5 w-5 shrink-0 text-[#d29531]" />
-                  <span>Networking opportunities with industry leaders</span>
+                  <span>
+                    Oportunidades de networking com líderes da indústria
+                  </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <ChevronRight className="mt-0.5 h-5 w-5 shrink-0 text-[#d29531]" />
-                  <span>Career advancement resources and coaching</span>
+                  <span>Recursos e coaching para avanço na carreira</span>
                 </li>
               </ul>
             </CardContent>
-            <CardFooter>
-              <Button
-                variant="outline"
-                className="w-full border-[#2e4b89] text-[#2e4b89] hover:bg-[#2e4b89] hover:text-white"
-              >
-                Learn More
-              </Button>
-            </CardFooter>
           </Card>
 
           <Card>
@@ -61,32 +55,26 @@ export const MemberBenefits = () => {
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#2e4b89]/10">
                 <FileText className="h-6 w-6 text-[#2e4b89]" />
               </div>
-              <CardTitle className="text-[#2e4b89]">Legal Protection</CardTitle>
+              <CardTitle className="text-[#2e4b89]">Proteção Legal</CardTitle>
             </CardHeader>
             <CardContent>
               <ul className="space-y-2 text-gray-600">
                 <li className="flex items-start gap-2">
                   <ChevronRight className="mt-0.5 h-5 w-5 shrink-0 text-[#d29531]" />
-                  <span>Contract review and negotiation assistance</span>
+                  <span>Revisão de contratos e assistência em negociações</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <ChevronRight className="mt-0.5 h-5 w-5 shrink-0 text-[#d29531]" />
-                  <span>Workplace dispute resolution</span>
+                  <span>Resolução de disputas no ambiente de trabalho</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <ChevronRight className="mt-0.5 h-5 w-5 shrink-0 text-[#d29531]" />
-                  <span>Legal consultation for work-related issues</span>
+                  <span>
+                    Consultoria jurídica para questões relacionadas ao trabalho
+                  </span>
                 </li>
               </ul>
             </CardContent>
-            <CardFooter>
-              <Button
-                variant="outline"
-                className="w-full border-[#2e4b89] text-[#2e4b89] hover:bg-[#2e4b89] hover:text-white"
-              >
-                Learn More
-              </Button>
-            </CardFooter>
           </Card>
 
           <Card>
@@ -95,39 +83,31 @@ export const MemberBenefits = () => {
                 <BookOpen className="h-6 w-6 text-[#2e4b89]" />
               </div>
               <CardTitle className="text-[#2e4b89]">
-                Education & Training
+                Educação e Treinamento
               </CardTitle>
             </CardHeader>
             <CardContent>
               <ul className="space-y-2 text-gray-600">
                 <li className="flex items-start gap-2">
                   <ChevronRight className="mt-0.5 h-5 w-5 shrink-0 text-[#d29531]" />
-                  <span>Continuing education courses</span>
+                  <span>Cursos de educação continuada</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <ChevronRight className="mt-0.5 h-5 w-5 shrink-0 text-[#d29531]" />
-                  <span>Industry-specific workshops and seminars</span>
+                  <span>Workshops e seminários específicos da indústria</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <ChevronRight className="mt-0.5 h-5 w-5 shrink-0 text-[#d29531]" />
-                  <span>Access to research and educational resources</span>
+                  <span>Acesso a pesquisas e recursos educacionais</span>
                 </li>
               </ul>
             </CardContent>
-            <CardFooter>
-              <Button
-                variant="outline"
-                className="w-full border-[#2e4b89] text-[#2e4b89] hover:bg-[#2e4b89] hover:text-white"
-              >
-                Learn More
-              </Button>
-            </CardFooter>
           </Card>
         </div>
 
         <div className="mt-12 text-center">
           <Button className="bg-[#d29531] hover:bg-[#d29531]/90">
-            View All Benefits
+            Fale Conosco
           </Button>
         </div>
       </div>

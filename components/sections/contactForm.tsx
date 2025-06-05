@@ -1,17 +1,19 @@
+import { Button } from "../button";
 import { Input } from "../ui/input";
 
 export const ContactForm = () => {
   return (
-    <section className="bg-[#2e4b89] py-16 text-white">
+    <section id="contact" className="bg-[#2e4b89] py-16 text-white">
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-4xl">
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-3xl font-bold md:text-4xl">
-              Get in Touch
+              Entre em contato
             </h2>
             <div className="mx-auto mb-6 h-1 w-16 bg-[#d29531]"></div>
             <p className="mx-auto max-w-2xl text-xl text-white/90">
-              Put your career in the spotlight in the Pharmaceutical Industry.
+              Deixe sua informações de contato, envie o formulário e coloque sua
+              carreira em destaque na indústria farmacêutica.
             </p>
           </div>
 
@@ -96,6 +98,12 @@ export const ContactForm = () => {
                   required
                   className="focus\\ w-full rounded-md border border-gray-300 px-3 py-2"
                 />
+              </div>
+
+              <div>
+                <Button className="bg-primary-yellow">
+                  Enviar informações
+                </Button>
               </div>
             </form>
           </div>
