@@ -31,7 +31,7 @@ export const Hero = () => {
             de Produtos Farmacêuticos no ABC, Baixada Santista e litoral
           </p>
           <div className="flex flex-col gap-4 sm:flex-row">
-            <Link href="https://wa.me/551332212796?text=Ol%C3%A1,%20estou%20iniciando%20uma%20conversa%20pelo%20site%20do%20SindiprosanABC">
+            <Link href="https://wa.me/551338777780?text=Ol%C3%A1,%20estou%20iniciando%20uma%20conversa%20pelo%20site%20do%20SindiprosanABC">
               <Button size="lg" className="bg-[#d29531] hover:bg-[#d29531]/90">
                 Fale Conosco
               </Button>

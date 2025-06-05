@@ -2,6 +2,7 @@ import { BarChart2, BookOpen, ChevronRight, FileText } from "lucide-react";
 import { Badge } from "../badge";
 import { Card, CardContent, CardHeader, CardTitle } from "../card";
 import { Button } from "../button";
+import Link from "next/link";
 
 export const MemberBenefits = () => {
   return (
@@ -106,9 +107,11 @@ export const MemberBenefits = () => {
         </div>
 
         <div className="mt-12 text-center">
-          <Button className="bg-[#d29531] hover:bg-[#d29531]/90">
-            Fale Conosco
-          </Button>
+          <Link href="https://wa.me/551338777780?text=Ol%C3%A1,%20estou%20iniciando%20uma%20conversa%20pelo%20site%20do%20SindiprosanABC">
+            <Button className="bg-[#d29531] hover:bg-[#d29531]/90">
+              Fale Conosco
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
