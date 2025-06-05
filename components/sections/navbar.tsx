@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button } from "../button";
-import { Menu, Search } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "../sheet";
 import Image from "next/image";
 

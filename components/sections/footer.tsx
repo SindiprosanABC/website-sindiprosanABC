@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Button } from "../button";
-import { Mail, MapPin, Phone } from "lucide-react";
-import { Input } from "../ui/input";
+import { Mail, Phone } from "lucide-react";
 import Image from "next/image";
 
 export const Footer = () => {

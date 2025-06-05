@@ -1,6 +1,6 @@
 import { BarChart2, BookOpen, ChevronRight, FileText } from "lucide-react";
 import { Badge } from "../badge";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "../card";
+import { Card, CardContent, CardHeader, CardTitle } from "../card";
 import { Button } from "../button";
 
 export const MemberBenefits = () => {

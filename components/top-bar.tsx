@@ -1,4 +1,4 @@
-import { Mail, Phone, User } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import Link from "next/link";
 
 export const TopBar = () => {

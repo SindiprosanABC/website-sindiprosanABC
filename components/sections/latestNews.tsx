@@ -9,7 +9,6 @@ import {
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "../card";
 import Image from "next/image";
 import { Badge } from "../badge";
-import { ArrowRight } from "lucide-react";
 
 export const LatestNews = () => {
   return (

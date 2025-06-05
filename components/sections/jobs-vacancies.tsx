@@ -5,7 +5,6 @@ import {
   ExternalLink,
   LocationEditIcon,
 } from "lucide-react";
-import { Button } from "../button";
 
 export const VacanciesJobs = () => {
   return (
