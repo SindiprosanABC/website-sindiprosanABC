@@ -11,13 +11,13 @@ export const Hero = () => {
         <Image
           src="/pharmaceuticsRepresentativePeople.png"
           alt="Pharmaceutical representatives in a meeting"
-          width={1200}
-          height={600}
-          className="h-full w-full object-cover opacity-20 2xl:object-fill"
+          width={2000}
+          height={1143}
+          className="relative h-full w-full object-cover object-top opacity-20"
           priority
         />
       </div>
-      <div className="relative z-10 container mx-auto px-4 py-16 md:py-24 lg:py-32 xl:py-52 2xl:py-60">
+      <div className="3xl:py-72 4xl:py-96 relative z-10 container mx-auto px-4 py-32 xl:py-52 2xl:py-64">
         <div className="max-w-3xl">
           <Badge className="mb-4 bg-[#d29531] hover:bg-[#d29531]/90">
             Sindiprosan-ABC - Fortalecendo a categoria e garantindo seus

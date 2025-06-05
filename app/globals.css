@@ -11,6 +11,8 @@
   --color-white-light: oklch(100 0 0);
   --color-primary-white: oklch(0.98 0.02 247.8);
   --color-white-dark: oklch(0.96 0.01 286.4);
+  --breakpoint-3xl: 125rem;
+  --breakpoint-4xl: 160rem;
 }
 
 @theme inline {
