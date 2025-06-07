@@ -1,6 +1,7 @@
 "use client";
 import Script from "next/script";
 import { useEffect, useRef, useState } from "react";
+
 declare global {
   interface Window {
     MeuComponente: {
@@ -18,6 +19,10 @@ export function ChatWidget() {
         window.MeuComponente.init(containerRef.current.id, {
           customerId: "S59A7X9LgkC9xn3CCzbp", // id mockado para onde as mensagens vão ser enviadas
           agent: "João", // por enquanto não tem impacto mas futuramente vai ser o nome do atendente que vai iniciar o atendimento
+          headerTitle: "Manybot",
+          tooltipText: "Precisa de ajuda ?",
+          initialMessage:
+            "Olá, eu sou a Rapha, atendente IA aqui da Manycontent",
         });
       } catch (error) {
         console.error("Erro ao inicializar MeuComponente:", error);
@@ -42,7 +47,7 @@ export function ChatWidget() {
     };
   }, []);
   const mainContent = (
-    <div className="flex h-screen flex-col">
+    <div className="flex flex-col">
       <div className="flex">
         <section className="viewportHeight relative w-full overflow-x-hidden overflow-y-auto">
           {/* CÓDIGO ADICIONADO */}
