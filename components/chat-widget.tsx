@@ -16,7 +16,7 @@ export function ChatWidget() {
     if (window.MeuComponente && containerRef.current) {
       try {
         window.MeuComponente.init(containerRef.current.id, {
-          customerId: "yrJ32FC1XhznN6CrmyUX", // id mockado para onde as mensagens vão ser enviadas
+          customerId: "S59A7X9LgkC9xn3CCzbp", // id mockado para onde as mensagens vão ser enviadas
           agent: "João", // por enquanto não tem impacto mas futuramente vai ser o nome do atendente que vai iniciar o atendimento
         });
       } catch (error) {
