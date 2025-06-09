@@ -21,8 +21,6 @@ export function ChatWidget() {
           agent: "João", // por enquanto não tem impacto mas futuramente vai ser o nome do atendente que vai iniciar o atendimento
           headerTitle: "Manybot",
           tooltipText: "Precisa de ajuda ?",
-          initialMessage:
-            "Olá, eu sou a Rapha, atendente IA aqui da Manycontent",
           chatButtonIcon: "/manyrobot-profile.png",
         });
       } catch (error) {
