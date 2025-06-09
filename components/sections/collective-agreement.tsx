@@ -15,7 +15,7 @@ export const CollectiveAgreement = () => {
           <p className="text-lg font-medium text-[#e6e9f9]">
             Convenção coletiva Atualizada
           </p>
-          <h3 className="text-center text-3xl font-bold text-white">
+          <h3 className="text-center text-2xl font-bold text-white md:text-3xl">
             Consulte aqui a sua última convenção coletiva atualizada (2025/2026)
           </h3>
         </div>
