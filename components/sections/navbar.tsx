@@ -130,9 +130,14 @@ export const Navbar = () => {
                 >
                   Contato
                 </Link>
-                <Button className="mt-4 bg-[#d29531] hover:bg-[#d29531]/90">
-                  Join Now
-                </Button>
+                <Link
+                  href="https://wa.me/551338777780?text=Ol%C3%A1,%20estou%20iniciando%20uma%20conversa%20pelo%20site%20do%20SindiprosanABC"
+                  target="_blank"
+                >
+                  <Button className="mt-4 bg-[#d29531] hover:bg-[#d29531]/90">
+                    Entrar em contato
+                  </Button>
+                </Link>
               </nav>
             </SheetContent>
           </Sheet>
