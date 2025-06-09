@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button } from "../button";
-import { Mail, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
 
 export const Footer = () => {
@@ -22,8 +22,7 @@ export const Footer = () => {
             </Link>
             <p className="mb-6 text-gray-400">
               Advogando os direitos e o desenvolvimento profissional de
-              representantes de vendas farmacêuticas desde 1995. Facebook
-              Twitter Instagram.
+              representantes de vendas farmacêuticas desde 2012.
             </p>
             <div className="flex gap-4">
               <Button
@@ -117,50 +116,52 @@ export const Footer = () => {
             </div>
           </div>
 
-          <div>
-            <h3 className="mb-6 text-lg font-bold">Quick Links</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link
-                  href="/#about"
-                  className="text-gray-400 transition-colors hover:text-[#d29531]"
-                >
-                  Sobre Nós
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/#benefits"
-                  className="text-gray-400 transition-colors hover:text-[#d29531]"
-                >
-                  Benefícios
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/#education"
-                  className="text-gray-400 transition-colors hover:text-[#d29531]"
-                >
-                  Educação
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/#news"
-                  className="text-gray-400 transition-colors hover:text-[#d29531]"
-                >
-                  Notícias
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/#contact"
-                  className="text-gray-400 transition-colors hover:text-[#d29531]"
-                >
-                  Contato
-                </Link>
-              </li>
-            </ul>
+          <div className="flex justify-center">
+            <div className="max-w-60">
+              <h3 className="mb-6 text-lg font-bold">Quick Links</h3>
+              <ul className="space-y-3">
+                <li>
+                  <Link
+                    href="/#about"
+                    className="text-gray-400 transition-colors hover:text-[#d29531]"
+                  >
+                    Sobre Nós
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/#benefits"
+                    className="text-gray-400 transition-colors hover:text-[#d29531]"
+                  >
+                    Benefícios
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/#education"
+                    className="text-gray-400 transition-colors hover:text-[#d29531]"
+                  >
+                    Educação
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/#news"
+                    className="text-gray-400 transition-colors hover:text-[#d29531]"
+                  >
+                    Notícias
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/#contact"
+                    className="text-gray-400 transition-colors hover:text-[#d29531]"
+                  >
+                    Contato
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
 
           <div>
@@ -168,12 +169,19 @@ export const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-center gap-3">
                 <Phone className="h-5 w-5 shrink-0 text-[#d29531]" />
-                <span className="text-gray-400">(13) 3221-2796</span>
+                <span className="text-gray-400">(013) 3877-7780</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 shrink-0 text-[#d29531]" />
                 <span className="text-gray-400">
                   sindiprosan-abc@sindiprosan-abc.org.br
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-[#d29531]" />
+                <span className="text-gray-400">
+                  Rua São Paulo, 41 - Sl. 2011 Vila Belmiro Santos SP 11075-330
+                  Brasil
                 </span>
               </li>
             </ul>

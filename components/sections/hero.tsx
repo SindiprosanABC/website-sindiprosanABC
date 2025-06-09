@@ -20,8 +20,8 @@ export const Hero = () => {
       <div className="3xl:py-72 4xl:py-96 relative z-10 container mx-auto px-4 py-40 xl:py-52 2xl:py-64">
         <div className="max-w-3xl">
           <Badge className="mb-4 bg-[#d29531] hover:bg-[#d29531]/90">
-            Sindiprosan-ABC - Fortalecendo a categoria e garantindo seus
-            direitos
+            Um Sindicato de vanguarda já na sua essência pois representa uma
+            categoria diferenciada!
           </Badge>
           <h1 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">
             Unindo representantes farmacêuticos para um futuro melhor

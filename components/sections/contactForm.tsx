@@ -25,14 +25,14 @@ export const ContactForm = () => {
                     htmlFor="name"
                     className="mb-2 block text-sm font-medium text-[#2e4b89]"
                   >
-                    Name: *
+                    Nome: *
                   </label>
                   <Input
                     id="name"
                     type="text"
                     required
                     className="w-full border-gray-300 focus:border-[#2e4b89] focus:ring-[#2e4b89]"
-                    placeholder="Your full name"
+                    placeholder="Digite seu nome"
                   />
                 </div>
                 <div>
@@ -47,7 +47,7 @@ export const ContactForm = () => {
                     type="email"
                     required
                     className="w-full border-gray-300 focus:border-[#2e4b89] focus:ring-[#2e4b89]"
-                    placeholder="your.email@example.com"
+                    placeholder="seu.email@example.com"
                   />
                 </div>
               </div>
@@ -55,10 +55,10 @@ export const ContactForm = () => {
               <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                 <div>
                   <label
-                    htmlFor="company"
+                    htmlFor="Empresa"
                     className="mb-2 block text-sm font-medium text-[#2e4b89]"
                   >
-                    Company: *
+                    Empresa: *
                   </label>
                   <Input
                     id="company"
@@ -73,14 +73,14 @@ export const ContactForm = () => {
                     htmlFor="phone"
                     className="mb-2 block text-sm font-medium text-[#2e4b89]"
                   >
-                    Phone: *
+                    Telefone: *
                   </label>
                   <Input
                     id="phone"
                     type="tel"
                     required
                     className="w-full border-gray-300 focus:border-[#2e4b89] focus:ring-[#2e4b89]"
-                    placeholder="(555) 123-4567"
+                    placeholder="(00) 0000-0000"
                   />
                 </div>
               </div>

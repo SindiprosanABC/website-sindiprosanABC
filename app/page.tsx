@@ -1,5 +1,6 @@
 import { AboutUs } from "@/components/sections/about-us";
 import { CallToAction } from "@/components/sections/call-to-action";
+import { CollectiveAgreement } from "@/components/sections/collective-agreement";
 import { ContactForm } from "@/components/sections/contactForm";
 import { EducationalPrograms } from "@/components/sections/educacional-programs";
 import { Hero } from "@/components/sections/hero";
@@ -17,6 +18,7 @@ export default function Home() {
       <VacanciesJobs />
       <EducationalPrograms />
       <AboutUs />
+      <CollectiveAgreement />
       <LatestNews />
       <ContactForm />
       <CallToAction />

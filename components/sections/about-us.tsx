@@ -22,17 +22,16 @@ export const AboutUs = () => {
           <div className="rounded-lg bg-[#2e4b89] p-8 text-white lg:p-12">
             <h2 className="mb-6 text-3xl font-bold lg:text-4xl">
               Entenda mais sobre o{" "}
-              <span className="text-[#d29531]">Sindiprosan-ABC</span>
+              <span className="text-[#d29531]">SINDIPROSAN-ABC </span>
             </h2>
             <p className="mb-6 text-lg leading-relaxed">
-              O Sindiprosan-ABC atua como a voz oficial dos Propagandistas,
+              O SINDIPROSAN-ABC atua como a voz oficial dos Propagandistas,
               Propagandistas Vendedores e Vendedores de Produtos Farmacêuticos.
               Nossa abrangência inclui as cidades do ABC Paulista (Santo André,
               São Bernardo do Campo, São Caetano do Sul, Diadema, Mauá, Ribeirão
               Pires e Rio Grande da Serra), a Baixada Santista (Santos, São
               Vicente, Praia Grande, Cubatão, Guarujá, Bertioga, Peruíbe,
-              Itanhaém, Mongaguá e Pedro de Toledo) e outras importantes regiões
-              do litoral e interior de São Paulo. Nosso compromisso é com a
+              Itanhaém, Mongaguá e Pedro de Toledo). Nosso compromisso é com a
               defesa intransigente dos direitos e interesses da categoria,
               buscando sempre o fortalecimento profissional e melhores condições
               de vida para todos os nossos representados, através de um diálogo
