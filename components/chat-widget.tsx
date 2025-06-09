@@ -23,6 +23,7 @@ export function ChatWidget() {
           tooltipText: "Precisa de ajuda ?",
           initialMessage:
             "Olá, eu sou a Rapha, atendente IA aqui da Manycontent",
+          chatButtonIcon: "/manyrobot-profile.png",
         });
       } catch (error) {
         console.error("Erro ao inicializar MeuComponente:", error);
