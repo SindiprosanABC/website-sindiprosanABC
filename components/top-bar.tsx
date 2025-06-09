@@ -10,7 +10,7 @@ export const TopBar = () => {
           className="flex items-center gap-1 transition-colors hover:text-[#d29531]"
         >
           <Phone className="h-3 w-3" />
-          <span className="hidden sm:inline">(13) 3221-2796</span>
+          <span className="hidden sm:inline">(013) 3877-7780</span>
         </Link>
         <Link
           href="/contact"
