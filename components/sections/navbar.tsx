@@ -73,7 +73,7 @@ export const Navbar = () => {
         <div className="flex items-center gap-2">
           <Link href="/#contact">
             <Button className="hidden bg-[#d29531] hover:bg-[#d29531]/90 md:flex">
-              Contate Nos
+              Associe-se
             </Button>
           </Link>
 
@@ -129,7 +129,7 @@ export const Navbar = () => {
                 </Link>
                 <Link href="/#contact">
                   <Button className="mt-4 bg-[#d29531] hover:bg-[#d29531]/90">
-                    Entrar em contato
+                    Associe-se
                   </Button>
                 </Link>
               </nav>

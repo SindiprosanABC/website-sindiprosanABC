@@ -25,7 +25,7 @@ export const ContactForm = () => {
                     htmlFor="name"
                     className="mb-2 block text-sm font-medium text-[#2e4b89]"
                   >
-                    Nome: *
+                    Nome:
                   </label>
                   <Input
                     id="name"
@@ -40,7 +40,7 @@ export const ContactForm = () => {
                     htmlFor="email"
                     className="mb-2 block text-sm font-medium text-[#2e4b89]"
                   >
-                    E-mail: *
+                    E-mail:
                   </label>
                   <Input
                     id="email"
@@ -55,43 +55,10 @@ export const ContactForm = () => {
               <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                 <div>
                   <label
-                    htmlFor="Empresa"
-                    className="mb-2 block text-sm font-medium text-[#2e4b89]"
-                  >
-                    Empresa: *
-                  </label>
-                  <Input
-                    id="company"
-                    type="text"
-                    required
-                    className="w-full border-gray-300 focus:border-[#2e4b89] focus:ring-[#2e4b89]"
-                    placeholder="Your company name"
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="phone"
-                    className="mb-2 block text-sm font-medium text-[#2e4b89]"
-                  >
-                    Telefone: *
-                  </label>
-                  <Input
-                    id="phone"
-                    type="tel"
-                    required
-                    className="w-full border-gray-300 focus:border-[#2e4b89] focus:ring-[#2e4b89]"
-                    placeholder="(00) 0000-0000"
-                  />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-                <div>
-                  <label
                     htmlFor="category"
                     className="mb-2 block text-sm font-medium text-[#2e4b89]"
                   >
-                    Categoria: *
+                    Assunto:
                   </label>
                   <select
                     id="category"
@@ -99,11 +66,12 @@ export const ContactForm = () => {
                     className="w-full rounded-md border border-gray-300 px-3 py-2 focus:border-[#2e4b89] focus:ring-[#2e4b89] focus:outline-none"
                   >
                     <option value="" disabled selected>
-                      Selecione uma categoria
+                      Selecione um assunto
                     </option>
-                    <option value="option1">Representante Farmacêutico</option>
-                    <option value="option2">Empresa Farmacêutica</option>
-                    <option value="option3">Outro</option>
+                    <option value="option1">Ouvidoria</option>
+                    <option value="option2">Associa-se</option>
+                    <option value="option3">Fale Conosco</option>
+                    <option value="option3">Enviar Currículo</option>
                   </select>
                 </div>
                 <div>
@@ -147,12 +115,30 @@ export const ContactForm = () => {
                 </div>
               </div>
 
+              <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+                <div>
+                  <label
+                    htmlFor="phone"
+                    className="mb-2 block text-sm font-medium text-[#2e4b89]"
+                  >
+                    Telefone:
+                  </label>
+                  <Input
+                    id="phone"
+                    type="tel"
+                    required
+                    className="w-full border-gray-300 focus:border-[#2e4b89] focus:ring-[#2e4b89]"
+                    placeholder="(00) 0000-0000"
+                  />
+                </div>
+              </div>
+
               <div>
                 <label
                   htmlFor="message"
                   className="mb-2 block text-sm font-medium text-[#2e4b89]"
                 >
-                  Message: *
+                  Message:
                 </label>
                 <textarea
                   id="message"
@@ -166,9 +152,6 @@ export const ContactForm = () => {
                 <Button className="bg-primary-yellow">
                   Enviar informações
                 </Button>
-                <span className="text-sm text-gray-500">
-                  * Campos obrigatórios
-                </span>
               </div>
             </form>
           </div>

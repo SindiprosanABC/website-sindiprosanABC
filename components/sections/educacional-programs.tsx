@@ -33,57 +33,6 @@ export const EducationalPrograms = () => {
               <Card>
                 <CardHeader className="pb-2">
                   <Badge className="mb-2 w-fit bg-[#2e4b89] hover:bg-[#2e4b89]/90">
-                    A definir
-                  </Badge>
-                  <CardTitle className="text-[#2e4b89]">
-                    IA para Propagandistas
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="mb-4 text-gray-600">
-                    Aprenda como melhor seu desempenho utilizando IA Generativa
-                  </p>
-                  <div className="mb-4 flex items-center text-sm text-gray-500">
-                    <Calendar className="mr-2 h-4 w-4" />
-                    <span>Online</span>
-                  </div>
-                </CardContent>
-                <CardFooter>
-                  <Button className="w-full bg-[#d29531] hover:bg-[#d29531]/90">
-                    Em breve
-                  </Button>
-                </CardFooter>
-              </Card>
-
-              <Card>
-                <CardHeader className="pb-2">
-                  <Badge className="mb-2 w-fit bg-[#2e4b89] hover:bg-[#2e4b89]/90">
-                    A definir
-                  </Badge>
-                  <CardTitle className="text-[#2e4b89]">
-                    Neurociência para Negócios
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="mb-4 text-gray-600">
-                    Aprenda como utilizer neurociencia para ter foco em
-                    Persuasão e Tomada de Decisão
-                  </p>
-                  <div className="mb-4 flex items-center text-sm text-gray-500">
-                    <Calendar className="mr-2 h-4 w-4" />
-                    <span>Online</span>
-                  </div>
-                </CardContent>
-                <CardFooter>
-                  <Button className="w-full bg-[#d29531] hover:bg-[#d29531]/90">
-                    Em breve
-                  </Button>
-                </CardFooter>
-              </Card>
-
-              <Card>
-                <CardHeader className="pb-2">
-                  <Badge className="mb-2 w-fit bg-[#2e4b89] hover:bg-[#2e4b89]/90">
                     Disponível
                   </Badge>
                   <CardTitle className="text-[#2e4b89]">
@@ -111,6 +60,64 @@ export const EducationalPrograms = () => {
                       Acessar
                     </Button>
                   </Link>
+                </CardFooter>
+              </Card>
+
+              <Card>
+                <CardHeader className="pb-2">
+                  <Badge className="mb-2 w-fit bg-[#2e4b89] hover:bg-[#2e4b89]/90">
+                    Disponível
+                  </Badge>
+                  <CardTitle className="text-[#2e4b89]">
+                    Introdução a IA Generativa
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="mb-4 text-gray-600">
+                    Aprenda como melhor seu desempenho utilizando IA Generativa
+                  </p>
+                  <div className="mb-4 flex items-center text-sm text-gray-500">
+                    <Calendar className="mr-2 h-4 w-4" />
+                    <span>Online</span>
+                  </div>
+                </CardContent>
+                <CardFooter>
+                  <Link
+                    href={
+                      "https://www.youtube.com/playlist?list=PLl-imZ4TMO6-SF0VRp2T0S5V77kUoWvgQ"
+                    }
+                    className="w-full"
+                  >
+                    <Button className="w-full bg-[#d29531] hover:bg-[#d29531]/90">
+                      Acessar
+                    </Button>
+                  </Link>
+                </CardFooter>
+              </Card>
+
+              <Card>
+                <CardHeader className="pb-2">
+                  <Badge className="mb-2 w-fit bg-[#2e4b89] hover:bg-[#2e4b89]/90">
+                    A definir
+                  </Badge>
+                  <CardTitle className="text-[#2e4b89]">
+                    Neurociência para Negócios
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="mb-4 text-gray-600">
+                    Aprenda como utilizer neurociencia para ter foco em
+                    Persuasão e Tomada de Decisão
+                  </p>
+                  <div className="mb-4 flex items-center text-sm text-gray-500">
+                    <Calendar className="mr-2 h-4 w-4" />
+                    <span>Online</span>
+                  </div>
+                </CardContent>
+                <CardFooter>
+                  <Button className="w-full bg-[#d29531] hover:bg-[#d29531]/90">
+                    Em breve
+                  </Button>
                 </CardFooter>
               </Card>
             </div>

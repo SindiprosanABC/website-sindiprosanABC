@@ -18,7 +18,7 @@ export const AttentionCTA = () => {
         <div className="flex justify-center">
           <Link href="https://wa.me/551338777780?text=Ol%C3%A1,%20estou%20iniciando%20uma%20conversa%20pelo%20site%20do%20SindiprosanABC">
             <Button size="lg" className="bg-[#d29531] hover:bg-[#d29531]/90">
-              Fale Conosco
+              Ouvidoria
             </Button>
           </Link>
         </div>
