@@ -3,7 +3,7 @@ import { Button } from "../button";
 
 export const CallToAction = () => {
   return (
-    <section className="bg-[#2e4b89] py-16 text-white">
+    <section id="contact" className="bg-[#2e4b89] py-16 text-white">
       <div className="container mx-auto px-4 text-center">
         <h2 className="mb-4 text-3xl font-bold">
           Faça parte do SindiprosanABC hoje
