@@ -3,7 +3,7 @@ import { Input } from "../ui/input";
 
 export const ContactForm = () => {
   return (
-    <section id="contact" className="bg-[#2e4b89] py-16 text-white">
+    <section id="contact" className="bg-[#2e4b89] pt-32 pb-24 text-white">
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-4xl">
           <div className="mb-12 text-center">
@@ -25,7 +25,7 @@ export const ContactForm = () => {
                     htmlFor="name"
                     className="mb-2 block text-sm font-medium text-[#2e4b89]"
                   >
-                    Nome: *
+                    Nome:
                   </label>
                   <Input
                     id="name"
@@ -40,7 +40,7 @@ export const ContactForm = () => {
                     htmlFor="email"
                     className="mb-2 block text-sm font-medium text-[#2e4b89]"
                   >
-                    E-mail: *
+                    E-mail:
                   </label>
                   <Input
                     id="email"
@@ -55,25 +55,73 @@ export const ContactForm = () => {
               <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                 <div>
                   <label
-                    htmlFor="Empresa"
+                    htmlFor="category"
                     className="mb-2 block text-sm font-medium text-[#2e4b89]"
                   >
-                    Empresa: *
+                    Assunto:
                   </label>
-                  <Input
-                    id="company"
-                    type="text"
+                  <select
+                    id="category"
                     required
-                    className="w-full border-gray-300 focus:border-[#2e4b89] focus:ring-[#2e4b89]"
-                    placeholder="Your company name"
-                  />
+                    className="w-full rounded-md border border-gray-300 px-3 py-2 focus:border-[#2e4b89] focus:ring-[#2e4b89] focus:outline-none"
+                  >
+                    <option value="" disabled selected>
+                      Selecione um assunto
+                    </option>
+                    <option value="option1">Ouvidoria</option>
+                    <option value="option2">Associa-se</option>
+                    <option value="option3">Fale Conosco</option>
+                    <option value="option3">Enviar Currículo</option>
+                  </select>
                 </div>
+                <div>
+                  <label
+                    htmlFor="resume"
+                    className="mb-2 block text-sm font-medium text-[#2e4b89]"
+                  >
+                    Currículo (PDF):
+                  </label>
+                  <div className="flex items-center">
+                    <label
+                      htmlFor="resume"
+                      className="flex cursor-pointer items-center rounded-md bg-gray-100 px-4 py-2 text-sm text-gray-700 hover:bg-gray-200"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="mr-2 h-5 w-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
+                        />
+                      </svg>
+                      Anexar PDF
+                    </label>
+                    <input
+                      id="resume"
+                      type="file"
+                      accept=".pdf"
+                      className="hidden"
+                    />
+                    <span className="ml-3 text-sm text-gray-500" id="file-name">
+                      Nenhum arquivo selecionado
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                 <div>
                   <label
                     htmlFor="phone"
                     className="mb-2 block text-sm font-medium text-[#2e4b89]"
                   >
-                    Telefone: *
+                    Telefone:
                   </label>
                   <Input
                     id="phone"
@@ -90,7 +138,7 @@ export const ContactForm = () => {
                   htmlFor="message"
                   className="mb-2 block text-sm font-medium text-[#2e4b89]"
                 >
-                  Message: *
+                  Message:
                 </label>
                 <textarea
                   id="message"
@@ -100,7 +148,7 @@ export const ContactForm = () => {
                 />
               </div>
 
-              <div>
+              <div className="flex items-center justify-between">
                 <Button className="bg-primary-yellow">
                   Enviar informações
                 </Button>

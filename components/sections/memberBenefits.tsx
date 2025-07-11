@@ -1,4 +1,4 @@
-import { BarChart2, BookOpen, ChevronRight, FileText } from "lucide-react";
+import { BookOpen, ChevronRight, FileText, Heart } from "lucide-react";
 import { Badge } from "../badge";
 import { Card, CardContent, CardHeader, CardTitle } from "../card";
 import { Button } from "../button";
@@ -27,7 +27,9 @@ export const MemberBenefits = () => {
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#2e4b89]/10">
                 <FileText className="h-6 w-6 text-[#2e4b89]" />
               </div>
-              <CardTitle className="text-[#2e4b89]">Proteção Legal</CardTitle>
+              <CardTitle className="text-[#2e4b89]">
+                Proteção Legal e Suporte Profissional
+              </CardTitle>
             </CardHeader>
             <CardContent>
               <ul className="space-y-2 text-gray-600">
@@ -49,33 +51,43 @@ export const MemberBenefits = () => {
                   <ChevronRight className="mt-0.5 h-5 w-5 shrink-0 text-[#d29531]" />
                   <span>Homologações</span>
                 </li>
+                <li className="flex items-start gap-2">
+                  <ChevronRight className="mt-0.5 h-5 w-5 shrink-0 text-[#d29531]" />
+                  <span>Salas de reunião para locação</span>
+                </li>
               </ul>
             </CardContent>
           </Card>
           <Card>
             <CardHeader className="pb-2">
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#2e4b89]/10">
-                <BarChart2 className="h-6 w-6 text-[#2e4b89]" />
+                <Heart className="h-6 w-6 text-[#2e4b89]" />
               </div>
               <CardTitle className="text-[#2e4b89]">
-                Desenvolvimento de Carreira
+                Saúde e Bem-estar
               </CardTitle>
             </CardHeader>
             <CardContent>
               <ul className="space-y-2 text-gray-600">
                 <li className="flex items-start gap-2">
                   <ChevronRight className="mt-0.5 h-5 w-5 shrink-0 text-[#d29531]" />
-                  <span>Programas de certificação profissional</span>
+                  <span>Tratamento odontológico com descontos especiais</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <ChevronRight className="mt-0.5 h-5 w-5 shrink-0 text-[#d29531]" />
-                  <span>
-                    Oportunidades de networking com líderes da indústria
-                  </span>
+                  <span>Atendimento psicológico</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <ChevronRight className="mt-0.5 h-5 w-5 shrink-0 text-[#d29531]" />
-                  <span>Recursos e coaching para avanço na carreira</span>
+                  <span>Tratamento médico com descontos especiais</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <ChevronRight className="mt-0.5 h-5 w-5 shrink-0 text-[#d29531]" />
+                  <span>Clube de campo / colônia de férias</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <ChevronRight className="mt-0.5 h-5 w-5 shrink-0 text-[#d29531]" />
+                  <span>Convênios com outros sindicatos</span>
                 </li>
               </ul>
             </CardContent>
@@ -87,22 +99,26 @@ export const MemberBenefits = () => {
                 <BookOpen className="h-6 w-6 text-[#2e4b89]" />
               </div>
               <CardTitle className="text-[#2e4b89]">
-                Educação e Treinamento
+                Educação e Desenvolvimento
               </CardTitle>
             </CardHeader>
             <CardContent>
               <ul className="space-y-2 text-gray-600">
                 <li className="flex items-start gap-2">
                   <ChevronRight className="mt-0.5 h-5 w-5 shrink-0 text-[#d29531]" />
-                  <span>Cursos de educação continuada</span>
+                  <span>Programas educacionais</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <ChevronRight className="mt-0.5 h-5 w-5 shrink-0 text-[#d29531]" />
-                  <span>Workshops e seminários específicos da indústria</span>
+                  <span>Workshops e seminários específicos</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <ChevronRight className="mt-0.5 h-5 w-5 shrink-0 text-[#d29531]" />
-                  <span>Acesso a pesquisas e recursos educacionais</span>
+                  <span>Descontos em universidades, pós-graduação e MBA</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <ChevronRight className="mt-0.5 h-5 w-5 shrink-0 text-[#d29531]" />
+                  <span>Recursos para desenvolvimento profissional</span>
                 </li>
               </ul>
             </CardContent>

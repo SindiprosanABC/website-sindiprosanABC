@@ -1,22 +1,12 @@
-import {
-  Badge,
-  Building,
-  Clock,
-  ExternalLink,
-  LocationEditIcon,
-} from "lucide-react";
+import { Building, Clock, ExternalLink, LocationEditIcon } from "lucide-react";
+import Link from "next/link";
 
 export const VacanciesJobs = () => {
   return (
     <section id="education" className="bg-white py-24">
       <div className="container mx-auto px-4">
         <div className="mb-12 text-center">
-          <Badge className="mb-2 bg-[#d29531] hover:bg-[#d29531]/90">
-            Career Opportunities
-          </Badge>
-          <h2 className="mb-4 text-3xl font-bold text-[#2e4b89]">
-            Vagas no Ramo
-          </h2>
+          <h2 className="mb-4 text-3xl font-bold text-[#2e4b89]">Vagas</h2>
           <p className="mx-auto max-w-2xl text-gray-600">
             Explore as principais vagas em aberto das principais empresas do
             setor na região Baixada Santista e ABC.
@@ -24,10 +14,9 @@ export const VacanciesJobs = () => {
         </div>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {/* Job Vacancy 1 */}
+          {/* Job Vacancy 1 - Keeping the first card as reference */}
           <a
-            href="https://www.jobatus.com.br/vaga-emprego/propagandista-litoral-sul-sp-527016135?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic
-"
+            href="https://www.jobatus.com.br/vaga-emprego/propagandista-litoral-sul-sp-527016135?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
             target="_blank"
             rel="noopener noreferrer"
             className="group block"
@@ -39,214 +28,39 @@ export const VacanciesJobs = () => {
                 </div>
               </div>
               <div className="mb-4">
-                <Badge className="bg-[#2e4b89]/10 text-[#2e4b89] hover:bg-[#2e4b89]/20">
+                <div className="w-24 rounded-2xl bg-[#2e4b89]/10 px-3 py-1 text-[#2e4b89] hover:bg-[#2e4b89]/20">
                   Full Time
-                </Badge>
-              </div>
-              <h3 className="mb-2 text-xl font-bold text-[#2e4b89] transition-colors group-hover:text-[#d29531]">
-                Senior Pharmaceutical Sales Representative
-              </h3>
-              <div className="mb-2 flex items-center gap-2 text-gray-600">
-                <Building className="h-4 w-4 text-[#d29531]" />
-                <span>Johnson & Johnson</span>
-              </div>
-              <div className="mb-2 flex items-center gap-2 text-gray-600">
-                <LocationEditIcon className="h-4 w-4 text-[#d29531]" />
-                <span>Chicago, IL (Hybrid)</span>
-              </div>
-              <div className="mb-4 flex items-center gap-2 text-gray-600">
-                <Clock className="h-4 w-4 text-[#d29531]" />
-                <span>Posted 2 days ago</span>
-              </div>
-              <p className="mb-6 flex-grow text-gray-600">
-                Seeking an experienced pharmaceutical sales representative to
-                promote our cardiovascular product line to healthcare providers
-                in the Chicago metropolitan area.
-              </p>
-              <div className="mt-auto flex items-center justify-between">
-                <span className="flex items-center gap-1 text-[#d29531] group-hover:underline">
-                  View Details <ExternalLink className="h-4 w-4" />
-                </span>
-              </div>
-            </div>
-          </a>
-
-          {/* Job Vacancy 2 */}
-          <a
-            href="https://br.whatjobs.com/gfj/303351155?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic
-"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group block"
-          >
-            <div className="flex h-full flex-col rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
-              <div className="mb-4">
-                <Badge className="bg-[#2e4b89]/10 text-[#2e4b89] hover:bg-[#2e4b89]/20">
-                  Full Time
-                </Badge>
-              </div>
-              <h3 className="mb-2 text-xl font-bold text-[#2e4b89] transition-colors group-hover:text-[#d29531]">
-                Regional Sales Manager - Pharmaceuticals
-              </h3>
-              <div className="mb-2 flex items-center gap-2 text-gray-600">
-                <Building className="h-4 w-4 text-[#d29531]" />
-                <span>Pfizer</span>
-              </div>
-              <div className="mb-2 flex items-center gap-2 text-gray-600">
-                <LocationEditIcon className="h-4 w-4 text-[#d29531]" />
-                <span>Boston, MA (On-site)</span>
-              </div>
-              <div className="mb-4 flex items-center gap-2 text-gray-600">
-                <Clock className="h-4 w-4 text-[#d29531]" />
-                <span>Posted 1 week ago</span>
-              </div>
-              <p className="mb-6 flex-grow text-gray-600">
-                Lead a team of pharmaceutical sales representatives in the
-                Northeast region, developing strategies to increase market share
-                for our oncology portfolio.
-              </p>
-              <div className="mt-auto flex items-center justify-between">
-                <span className="flex items-center gap-1 text-[#d29531] group-hover:underline">
-                  View Details <ExternalLink className="h-4 w-4" />
-                </span>
-              </div>
-            </div>
-          </a>
-
-          {/* Job Vacancy 3 */}
-          <a
-            href="https://br.whatjobs.com/gfj/305514700?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic
-"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group block"
-          >
-            <div className="relative flex h-full flex-col overflow-hidden rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
-              <div className="absolute top-0 right-0">
-                <div className="rounded-bl-lg bg-[#2e4b89] px-3 py-1 text-xs font-bold text-white">
-                  Featured
                 </div>
               </div>
-              <div className="mb-4">
-                <Badge className="bg-[#2e4b89]/10 text-[#2e4b89] hover:bg-[#2e4b89]/20">
-                  Contract
-                </Badge>
-              </div>
               <h3 className="mb-2 text-xl font-bold text-[#2e4b89] transition-colors group-hover:text-[#d29531]">
-                Pharmaceutical Sales Specialist - Diabetes
+                Propagandista Junior (Santos e Região)
               </h3>
               <div className="mb-2 flex items-center gap-2 text-gray-600">
                 <Building className="h-4 w-4 text-[#d29531]" />
-                <span>Novo Nordisk</span>
+                <span>Laboratório Cristália</span>
               </div>
               <div className="mb-2 flex items-center gap-2 text-gray-600">
                 <LocationEditIcon className="h-4 w-4 text-[#d29531]" />
-                <span>Remote (US-based)</span>
+                <span>Santos, SP • via Glassdoor</span>
               </div>
               <div className="mb-4 flex items-center gap-2 text-gray-600">
                 <Clock className="h-4 w-4 text-[#d29531]" />
-                <span>Posted 3 days ago</span>
+                <span>Postado há 30 dias</span>
               </div>
-              <p className="mb-6 flex-grow text-gray-600">
-                Specialist role focused on promoting our innovative diabetes
-                treatment solutions to endocrinologists and primary care
-                physicians.
-              </p>
+
               <div className="mt-auto flex items-center justify-between">
-                <span className="flex items-center gap-1 text-[#d29531] group-hover:underline">
-                  View Details <ExternalLink className="h-4 w-4" />
-                </span>
+                <Link href="https://laboratoriocristalia.pandape.infojobs.com.br/Detail/2234944?ov=5&xtor=AL-366332663&source=Indeed&utm_source=indeed&utm_medium=referral&utm_campaign=feed&utm_term=organic&utm_content=ats&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic">
+                  <span className="flex items-center gap-1 text-[#d29531] group-hover:underline">
+                    Ver detalhes <ExternalLink className="h-4 w-4" />
+                  </span>
+                </Link>
               </div>
             </div>
           </a>
 
-          {/* Job Vacancy 4 */}
+          {/* Job Vacancy 2 - PROPAGANDISTA VENDEDOR JR - EMS PRESCRICAO */}
           <a
-            href="https://br.whatjobs.com/gfj/305130646?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic
-"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group block"
-          >
-            <div className="flex h-full flex-col rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
-              <div className="mb-4">
-                <Badge className="bg-[#2e4b89]/10 text-[#2e4b89] hover:bg-[#2e4b89]/20">
-                  Full Time
-                </Badge>
-              </div>
-              <h3 className="mb-2 text-xl font-bold text-[#2e4b89] transition-colors group-hover:text-[#d29531]">
-                Entry-Level Pharmaceutical Sales Representative
-              </h3>
-              <div className="mb-2 flex items-center gap-2 text-gray-600">
-                <Building className="h-4 w-4 text-[#d29531]" />
-                <span>AstraZeneca</span>
-              </div>
-              <div className="mb-2 flex items-center gap-2 text-gray-600">
-                <LocationEditIcon className="h-4 w-4 text-[#d29531]" />
-                <span>Dallas, TX (Hybrid)</span>
-              </div>
-              <div className="mb-4 flex items-center gap-2 text-gray-600">
-                <Clock className="h-4 w-4 text-[#d29531]" />
-                <span>Posted 5 days ago</span>
-              </div>
-              <p className="mb-6 flex-grow text-gray-600">
-                Great opportunity for recent graduates with a science background
-                to start a career in pharmaceutical sales. Comprehensive
-                training provided.
-              </p>
-              <div className="mt-auto flex items-center justify-between">
-                <span className="flex items-center gap-1 text-[#d29531] group-hover:underline">
-                  View Details <ExternalLink className="h-4 w-4" />
-                </span>
-              </div>
-            </div>
-          </a>
-
-          {/* Job Vacancy 5 */}
-          <a
-            href="https://br.whatjobs.com/gfj/305263912?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic 
-"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group block"
-          >
-            <div className="flex h-full flex-col rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
-              <div className="mb-4">
-                <Badge className="bg-[#2e4b89]/10 text-[#2e4b89] hover:bg-[#2e4b89]/20">
-                  Part Time
-                </Badge>
-              </div>
-              <h3 className="mb-2 text-xl font-bold text-[#2e4b89] transition-colors group-hover:text-[#d29531]">
-                Medical Science Liaison - Neurology
-              </h3>
-              <div className="mb-2 flex items-center gap-2 text-gray-600">
-                <Building className="h-4 w-4 text-[#d29531]" />
-                <span>Biogen</span>
-              </div>
-              <div className="mb-2 flex items-center gap-2 text-gray-600">
-                <LocationEditIcon className="h-4 w-4 text-[#d29531]" />
-                <span>San Francisco, CA (Hybrid)</span>
-              </div>
-              <div className="mb-4 flex items-center gap-2 text-gray-600">
-                <Clock className="h-4 w-4 text-[#d29531]" />
-                <span>Posted 1 week ago</span>
-              </div>
-              <p className="mb-6 flex-grow text-gray-600">
-                Seeking a PhD or MD to serve as a scientific resource for
-                healthcare providers regarding our neurology products. Strong
-                scientific background required.
-              </p>
-              <div className="mt-auto flex items-center justify-between">
-                <span className="flex items-center gap-1 text-[#d29531] group-hover:underline">
-                  View Details <ExternalLink className="h-4 w-4" />
-                </span>
-              </div>
-            </div>
-          </a>
-
-          {/* Job Vacancy 6 */}
-          <a
-            href="https://br.whatjobs.com/gfj/305130646?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+            href="https://www.linkedin.com/jobs/view/propagandista-vendedor-jr-ems-prescricao-praia-grande-sp-30032-at-ems-4258728769/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic&originalSubdomain=br"
             target="_blank"
             rel="noopener noreferrer"
             className="group block"
@@ -258,33 +72,303 @@ export const VacanciesJobs = () => {
                 </div>
               </div>
               <div className="mb-4">
-                <Badge className="bg-[#2e4b89]/10 text-[#2e4b89] hover:bg-[#2e4b89]/20">
+                <div className="w-24 rounded-2xl bg-[#2e4b89]/10 px-3 py-1 text-[#2e4b89] hover:bg-[#2e4b89]/20">
                   Full Time
-                </Badge>
+                </div>
               </div>
               <h3 className="mb-2 text-xl font-bold text-[#2e4b89] transition-colors group-hover:text-[#d29531]">
-                Hospital Account Manager - Pharmaceuticals
+                PROPAGANDISTA VENDEDOR JR - EMS PRESCRICAO - PRAIA GRANDE/SP
               </h3>
               <div className="mb-2 flex items-center gap-2 text-gray-600">
                 <Building className="h-4 w-4 text-[#d29531]" />
-                <span>Merck</span>
+                <span>Grupo NC</span>
               </div>
               <div className="mb-2 flex items-center gap-2 text-gray-600">
                 <LocationEditIcon className="h-4 w-4 text-[#d29531]" />
-                <span>Atlanta, GA (On-site)</span>
+                <span>Santos, SP • via Izirh</span>
               </div>
               <div className="mb-4 flex items-center gap-2 text-gray-600">
                 <Clock className="h-4 w-4 text-[#d29531]" />
-                <span>Posted today</span>
+                <span>Postado 10 dias</span>
               </div>
-              <p className="mb-6 flex-grow text-gray-600">
-                Develop and maintain relationships with hospital systems to
-                increase adoption of our pharmaceutical products. Experience
-                with hospital formularies preferred.
-              </p>
+
               <div className="mt-auto flex items-center justify-between">
                 <span className="flex items-center gap-1 text-[#d29531] group-hover:underline">
-                  View Details <ExternalLink className="h-4 w-4" />
+                  Ver detalhes <ExternalLink className="h-4 w-4" />
+                </span>
+              </div>
+            </div>
+          </a>
+
+          {/* Job Vacancy 3 - Propagandista Vendedor Junior - Baixada Santista */}
+          <a
+            href="https://br.whatjobs.com/gfj/314476671?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block"
+          >
+            <div className="flex h-full flex-col rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+              <div className="mb-4">
+                <div className="w-24 rounded-2xl bg-[#2e4b89]/10 px-3 py-1 text-[#2e4b89] hover:bg-[#2e4b89]/20">
+                  Full Time
+                </div>
+              </div>
+              <h3 className="mb-2 text-xl font-bold text-[#2e4b89] transition-colors group-hover:text-[#d29531]">
+                Propagandista Vendedor Junior - Baixada Santista/SP
+              </h3>
+              <div className="mb-2 flex items-center gap-2 text-gray-600">
+                <Building className="h-4 w-4 text-[#d29531]" />
+                <span>MEGALABS BRASIL</span>
+              </div>
+              <div className="mb-2 flex items-center gap-2 text-gray-600">
+                <LocationEditIcon className="h-4 w-4 text-[#d29531]" />
+                <span>Santos, SP</span>
+              </div>
+              <div className="mb-4 flex items-center gap-2 text-gray-600">
+                <Clock className="h-4 w-4 text-[#d29531]" />
+                <span>Postado 13 dias</span>
+              </div>
+
+              <div className="mt-auto flex items-center justify-between">
+                <span className="flex items-center gap-1 text-[#d29531] group-hover:underline">
+                  Ver detalhes <ExternalLink className="h-4 w-4" />
+                </span>
+              </div>
+            </div>
+          </a>
+
+          {/* Job Vacancy 4 - Propagandista Regional - Santos */}
+          <a
+            href="https://br.whatjobs.com/gfj/314476671?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block"
+          >
+            <div className="flex h-full flex-col rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+              <div className="mb-4">
+                <div className="w-24 rounded-2xl bg-[#2e4b89]/10 px-3 py-1 text-[#2e4b89] hover:bg-[#2e4b89]/20">
+                  Full Time
+                </div>
+              </div>
+              <h3 className="mb-2 text-xl font-bold text-[#2e4b89] transition-colors group-hover:text-[#d29531]">
+                Propagandista Regional - Santos
+              </h3>
+              <div className="mb-2 flex items-center gap-2 text-gray-600">
+                <Building className="h-4 w-4 text-[#d29531]" />
+                <span>FEMME - LABORATÓRIO DA MULHER</span>
+              </div>
+              <div className="mb-2 flex items-center gap-2 text-gray-600">
+                <LocationEditIcon className="h-4 w-4 text-[#d29531]" />
+                <span>Santos, SP</span>
+              </div>
+              <div className="mb-4 flex items-center gap-2 text-gray-600">
+                <Clock className="h-4 w-4 text-[#d29531]" />
+                <span>Postado 22 dias</span>
+              </div>
+
+              <div className="mt-auto flex items-center justify-between">
+                <span className="flex items-center gap-1 text-[#d29531] group-hover:underline">
+                  Ver detalhes <ExternalLink className="h-4 w-4" />
+                </span>
+              </div>
+            </div>
+          </a>
+
+          {/* Job Vacancy 5 - Propagandista Vendedor Junior */}
+          <a
+            href="https://br.trabajo.org/emprego-1215-0659143770e40a8677b2f2e3f2f0bff0?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block"
+          >
+            <div className="relative flex h-full flex-col overflow-hidden rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+              <div className="absolute top-0 right-0">
+                <div className="rounded-bl-lg bg-[#d29531] px-3 py-1 text-xs font-bold text-white">
+                  New
+                </div>
+              </div>
+              <div className="mb-4">
+                <div className="w-24 rounded-2xl bg-[#2e4b89]/10 px-3 py-1 text-[#2e4b89] hover:bg-[#2e4b89]/20">
+                  Full Time
+                </div>
+              </div>
+              <h3 className="mb-2 text-xl font-bold text-[#2e4b89] transition-colors group-hover:text-[#d29531]">
+                Propagandista Vendedor Junior
+              </h3>
+              <div className="mb-2 flex items-center gap-2 text-gray-600">
+                <Building className="h-4 w-4 text-[#d29531]" />
+                <span>MEGALABS BRASIL</span>
+              </div>
+              <div className="mb-2 flex items-center gap-2 text-gray-600">
+                <LocationEditIcon className="h-4 w-4 text-[#d29531]" />
+                <span>Santos, SP</span>
+              </div>
+              <div className="mb-4 flex items-center gap-2 text-gray-600">
+                <Clock className="h-4 w-4 text-[#d29531]" />
+                <span>Postado 12 dias</span>
+              </div>
+
+              <div className="mt-auto flex items-center justify-between">
+                <span className="flex items-center gap-1 text-[#d29531] group-hover:underline">
+                  Ver detalhes <ExternalLink className="h-4 w-4" />
+                </span>
+              </div>
+            </div>
+          </a>
+
+          {/* Job Vacancy 6 - Modelo - Propagandista Vendodor(a) */}
+          <a
+            href="https://br.whatjobs.com/gfj/313814879?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block"
+          >
+            <div className="flex h-full flex-col rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+              <div className="mb-4">
+                <div className="w-24 rounded-2xl bg-[#2e4b89]/10 px-3 py-1 text-[#2e4b89] hover:bg-[#2e4b89]/20">
+                  Full Time
+                </div>
+              </div>
+              <h3 className="mb-2 text-xl font-bold text-[#2e4b89] transition-colors group-hover:text-[#d29531]">
+                Modelo - Propagandista Vendodor(a)
+              </h3>
+              <div className="mb-2 flex items-center gap-2 text-gray-600">
+                <Building className="h-4 w-4 text-[#d29531]" />
+                <span>Momenta</span>
+              </div>
+              <div className="mb-2 flex items-center gap-2 text-gray-600">
+                <LocationEditIcon className="h-4 w-4 text-[#d29531]" />
+                <span>Santos, SP</span>
+              </div>
+              <div className="mb-4 flex items-center gap-2 text-gray-600">
+                <Clock className="h-4 w-4 text-[#d29531]" />
+                <span>Postado 13 dias</span>
+              </div>
+
+              <div className="mt-auto flex items-center justify-between">
+                <span className="flex items-center gap-1 text-[#d29531] group-hover:underline">
+                  Ver detalhes <ExternalLink className="h-4 w-4" />
+                </span>
+              </div>
+            </div>
+          </a>
+
+          {/* Job Vacancy 7 - Propagandista Júnior */}
+          <a
+            href="https://br.whatjobs.com/gfj/316724577?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block"
+          >
+            <div className="relative flex h-full flex-col overflow-hidden rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+              <div className="absolute top-0 right-0">
+                <div className="rounded-bl-lg bg-[#d29531] px-3 py-1 text-xs font-bold text-white">
+                  New
+                </div>
+              </div>
+              <div className="mb-4">
+                <div className="w-24 rounded-2xl bg-[#2e4b89]/10 px-3 py-1 text-[#2e4b89] hover:bg-[#2e4b89]/20">
+                  Full Time
+                </div>
+              </div>
+              <h3 className="mb-2 text-xl font-bold text-[#2e4b89] transition-colors group-hover:text-[#d29531]">
+                Propagandista Júnior
+              </h3>
+              <div className="mb-2 flex items-center gap-2 text-gray-600">
+                <Building className="h-4 w-4 text-[#d29531]" />
+                <span>Diffucap Chemobras</span>
+              </div>
+              <div className="mb-2 flex items-center gap-2 text-gray-600">
+                <LocationEditIcon className="h-4 w-4 text-[#d29531]" />
+                <span>Mauá, Ribeirão Pires e Santo André, SP</span>
+              </div>
+              <div className="mb-4 flex items-center gap-2 text-gray-600">
+                <Clock className="h-4 w-4 text-[#d29531]" />
+                <span>Postado recentemente</span>
+              </div>
+
+              <div className="mt-auto flex items-center justify-between">
+                <span className="flex items-center gap-1 text-[#d29531] group-hover:underline">
+                  Ver detalhes <ExternalLink className="h-4 w-4" />
+                </span>
+              </div>
+            </div>
+          </a>
+
+          {/* Job Vacancy 8 - Propagandista Vendedor Junior */}
+          <a
+            href="https://br.trabajo.org/emprego-3315-254c552fae67245d9c90af9c74aa7740?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block"
+          >
+            <div className="flex h-full flex-col rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+              <div className="mb-4">
+                <div className="w-24 rounded-2xl bg-[#2e4b89]/10 px-3 py-1 text-[#2e4b89] hover:bg-[#2e4b89]/20">
+                  Full Time
+                </div>
+              </div>
+              <h3 className="mb-2 text-xl font-bold text-[#2e4b89] transition-colors group-hover:text-[#d29531]">
+                Propagandista Vendedor Junior
+              </h3>
+              <div className="mb-2 flex items-center gap-2 text-gray-600">
+                <Building className="h-4 w-4 text-[#d29531]" />
+                <span>MEGALABS BRASIL</span>
+              </div>
+              <div className="mb-2 flex items-center gap-2 text-gray-600">
+                <LocationEditIcon className="h-4 w-4 text-[#d29531]" />
+                <span>São Bernardo do Campo, SP • Divisão Especialidades</span>
+              </div>
+              <div className="mb-4 flex items-center gap-2 text-gray-600">
+                <Clock className="h-4 w-4 text-[#d29531]" />
+                <span>Postado recentemente</span>
+              </div>
+
+              <div className="mt-auto flex items-center justify-between">
+                <span className="flex items-center gap-1 text-[#d29531] group-hover:underline">
+                  Ver detalhes <ExternalLink className="h-4 w-4" />
+                </span>
+              </div>
+            </div>
+          </a>
+
+          {/* Job Vacancy 9 - Propagandista Vendedor Jr */}
+          <a
+            href="https://jobs.consulteportal.com.br/vaga/propagandista-vendedor-jr-ems-prescricao-sao-bernardo-do-campo-sp-ems-pharma/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block"
+          >
+            <div className="relative flex h-full flex-col overflow-hidden rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+              <div className="absolute top-0 right-0">
+                <div className="rounded-bl-lg bg-[#d29531] px-3 py-1 text-xs font-bold text-white">
+                  New
+                </div>
+              </div>
+              <div className="mb-4">
+                <div className="w-24 rounded-2xl bg-[#2e4b89]/10 px-3 py-1 text-[#2e4b89] hover:bg-[#2e4b89]/20">
+                  Full Time
+                </div>
+              </div>
+              <h3 className="mb-2 text-xl font-bold text-[#2e4b89] transition-colors group-hover:text-[#d29531]">
+                Propagandista Vendedor Jr
+              </h3>
+              <div className="mb-2 flex items-center gap-2 text-gray-600">
+                <Building className="h-4 w-4 text-[#d29531]" />
+                <span>EMS Pharma</span>
+              </div>
+              <div className="mb-2 flex items-center gap-2 text-gray-600">
+                <LocationEditIcon className="h-4 w-4 text-[#d29531]" />
+                <span>São Bernardo do Campo, SP • EMS Prescrição</span>
+              </div>
+              <div className="mb-4 flex items-center gap-2 text-gray-600">
+                <Clock className="h-4 w-4 text-[#d29531]" />
+                <span>Postado 10 dias</span>
+              </div>
+
+              <div className="mt-auto flex items-center justify-between">
+                <span className="flex items-center gap-1 text-[#d29531] group-hover:underline">
+                  Ver detalhes <ExternalLink className="h-4 w-4" />
                 </span>
               </div>
             </div>

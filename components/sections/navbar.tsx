@@ -71,12 +71,9 @@ export const Navbar = () => {
         </nav>
 
         <div className="flex items-center gap-2">
-          <Link
-            href="https://wa.me/551338777780?text=Ol%C3%A1,%20estou%20iniciando%20uma%20conversa%20pelo%20site%20do%20SindiprosanABC"
-            target="_blank"
-          >
+          <Link href="/#contact">
             <Button className="hidden bg-[#d29531] hover:bg-[#d29531]/90 md:flex">
-              Contate Nos
+              Associe-se
             </Button>
           </Link>
 
@@ -130,12 +127,9 @@ export const Navbar = () => {
                 >
                   Contato
                 </Link>
-                <Link
-                  href="https://wa.me/551338777780?text=Ol%C3%A1,%20estou%20iniciando%20uma%20conversa%20pelo%20site%20do%20SindiprosanABC"
-                  target="_blank"
-                >
+                <Link href="/#contact">
                   <Button className="mt-4 bg-[#d29531] hover:bg-[#d29531]/90">
-                    Entrar em contato
+                    Associe-se
                   </Button>
                 </Link>
               </nav>

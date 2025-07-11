@@ -3,6 +3,7 @@ import { Badge } from "../badge";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "../card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../tabs";
 import { Button } from "../button";
+import Link from "next/link";
 
 export const EducationalPrograms = () => {
   return (
@@ -23,7 +24,7 @@ export const EducationalPrograms = () => {
 
         <Tabs defaultValue="upcoming" className="w-full">
           <TabsList className="mx-auto mb-8 grid w-full max-w-md grid-cols-2">
-            <TabsTrigger value="upcoming">Programas futuros</TabsTrigger>
+            <TabsTrigger value="upcoming">Programas</TabsTrigger>
             <TabsTrigger value="popular">Cursos Populares</TabsTrigger>
           </TabsList>
 
@@ -32,10 +33,43 @@ export const EducationalPrograms = () => {
               <Card>
                 <CardHeader className="pb-2">
                   <Badge className="mb-2 w-fit bg-[#2e4b89] hover:bg-[#2e4b89]/90">
-                    A definir
+                    Disponível
                   </Badge>
                   <CardTitle className="text-[#2e4b89]">
-                    Inteligência Artificial para Propagandistas
+                    LinkedIn para Propagandistas
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="mb-4 text-gray-600">
+                    Aprenda como deixar seu LinkedIn impecável e criar conteúdos
+                    relevantes na rede social
+                  </p>
+                  <div className="mb-4 flex items-center text-sm text-gray-500">
+                    <Calendar className="mr-2 h-4 w-4" />
+                    <span>Online</span>
+                  </div>
+                </CardContent>
+                <CardFooter>
+                  <Link
+                    href={
+                      "https://youtube.com/playlist?list=PLl-imZ4TMO69sxKte_mOowkrSkJHYWqeL&si=bktqguWj8TmMQP8A"
+                    }
+                    className="w-full"
+                  >
+                    <Button className="w-full bg-[#d29531] hover:bg-[#d29531]/90">
+                      Acessar
+                    </Button>
+                  </Link>
+                </CardFooter>
+              </Card>
+
+              <Card>
+                <CardHeader className="pb-2">
+                  <Badge className="mb-2 w-fit bg-[#2e4b89] hover:bg-[#2e4b89]/90">
+                    Disponível
+                  </Badge>
+                  <CardTitle className="text-[#2e4b89]">
+                    Introdução a IA Generativa
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -44,13 +78,20 @@ export const EducationalPrograms = () => {
                   </p>
                   <div className="mb-4 flex items-center text-sm text-gray-500">
                     <Calendar className="mr-2 h-4 w-4" />
-                    <span>Presencial - 1 dia de evento</span>
+                    <span>Online</span>
                   </div>
                 </CardContent>
                 <CardFooter>
-                  <Button className="w-full bg-[#d29531] hover:bg-[#d29531]/90">
-                    Em breve
-                  </Button>
+                  <Link
+                    href={
+                      "https://www.youtube.com/playlist?list=PLl-imZ4TMO6-SF0VRp2T0S5V77kUoWvgQ"
+                    }
+                    className="w-full"
+                  >
+                    <Button className="w-full bg-[#d29531] hover:bg-[#d29531]/90">
+                      Acessar
+                    </Button>
+                  </Link>
                 </CardFooter>
               </Card>
 
@@ -70,33 +111,7 @@ export const EducationalPrograms = () => {
                   </p>
                   <div className="mb-4 flex items-center text-sm text-gray-500">
                     <Calendar className="mr-2 h-4 w-4" />
-                    <span>Presencial - 1 dia de Evento</span>
-                  </div>
-                </CardContent>
-                <CardFooter>
-                  <Button className="w-full bg-[#d29531] hover:bg-[#d29531]/90">
-                    Em breve
-                  </Button>
-                </CardFooter>
-              </Card>
-
-              <Card>
-                <CardHeader className="pb-2">
-                  <Badge className="mb-2 w-fit bg-[#2e4b89] hover:bg-[#2e4b89]/90">
-                    A definir
-                  </Badge>
-                  <CardTitle className="text-[#2e4b89]">
-                    LinkedIn para Propagandistas
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="mb-4 text-gray-600">
-                    Aprenda como deixar seu LinkedIn impecável e criar conteúdos
-                    relevantes na rede social
-                  </p>
-                  <div className="mb-4 flex items-center text-sm text-gray-500">
-                    <Calendar className="mr-2 h-4 w-4" />
-                    <span>Presencial - 1 dia de evento</span>
+                    <span>Online</span>
                   </div>
                 </CardContent>
                 <CardFooter>
