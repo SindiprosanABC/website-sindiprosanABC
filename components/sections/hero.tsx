@@ -43,7 +43,7 @@ export const Hero = () => {
                 variant="outline"
                 className="border-white text-white hover:bg-white hover:text-[#2e4b89]"
               >
-                Associa-se
+                Associe-se
               </Button>
             </Link>
           </div>
