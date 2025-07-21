@@ -72,7 +72,7 @@ export const Navbar = () => {
 
         <div className="flex items-center gap-2">
           <Link href="/#contact">
-            <Button className="hidden bg-[#d29531] hover:bg-[#d29531]/90 md:flex">
+            <Button className="m:flex hidden bg-[#d29531] hover:bg-[#d29531]/90">
               Associe-se
             </Button>
           </Link>

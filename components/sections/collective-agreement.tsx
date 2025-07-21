@@ -3,7 +3,7 @@ import { Button } from "../button";
 
 export const CollectiveAgreement = () => {
   const handleOpenPdf = () => {
-    const pdfPath = "/CCT-FIP-2025_2027-Clicksign.pdf";
+    const pdfPath = "/CCT - FIP - 2025_2027 - Registrado Mediador.pdf";
 
     window.open(pdfPath, "_blank");
   };
