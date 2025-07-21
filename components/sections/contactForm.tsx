@@ -61,6 +61,7 @@ export const ContactForm = () => {
       //   description: "Aconteceu algo de errado",
       //   variant: "destructive",
       // });
+      console.log(error);
       alert("Erro ao enviar o email. Por favor, tente novamente."); // Substituição simples para o toast
     } finally {
       setLoading(false);
