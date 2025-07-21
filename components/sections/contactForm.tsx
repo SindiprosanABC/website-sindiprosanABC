@@ -24,44 +24,47 @@ export const ContactForm = () => {
     handleSubmit,
     formState: { errors },
     watch,
+    reset,
   } = useForm<FormValues>();
 
-  const [loading] = useState(false);
+  const [loading, setLoading] = useState(false);
   // const { toast } = useToast();
 
   const fileName = watch("resume")?.[0]?.name;
 
   const onSubmit = async (data: FormValues) => {
-    // setLoading(true);
-    // try {
-    //   const formData = new FormData();
-    //   formData.append("name", data.name);
-    //   formData.append("email", data.email);
-    //   formData.append("category", data.category);
-    //   formData.append("phone", data.phone);
-    //   formData.append("message", data.message);
-    //   formData.append("resume", data.resume[0]); // Anexa o arquivo
-    //   const response = await fetch("http://localhost:3000/api/sendEmail", {
-    //     method: "POST",
-    //     body: formData,
-    //   });
-    //   if (!response.ok) {
-    //     throw new Error("Erro ao enviar o email.");
-    //   }
-    //   // toast({ description: "Email enviado com sucesso" });
-    //   alert("Email enviado com sucesso!"); // Substituição simples para o toast
-    //   reset(); // Limpa o formulário após o sucesso
-    // } catch (error) {
-    //   // toast({
-    //   //   title: "Email não foi enviado",
-    //   //   description: "Aconteceu algo de errado",
-    //   //   variant: "destructive",
-    //   // });
-    //   alert("Erro ao enviar o email. Por favor, tente novamente."); // Substituição simples para o toast
-    // } finally {
-    //   setLoading(false);
-    // }
-    console.log(data);
+    setLoading(true);
+    try {
+      const formData = new FormData();
+      formData.append("name", data.name);
+      formData.append("email", data.email);
+      formData.append("category", data.category);
+      formData.append("phone", data.phone);
+      formData.append("message", data.message);
+      formData.append("resume", data.resume[0]); // Anexa o arquivo
+      const response = await fetch(
+        "https://website-sindiprosan-abc.vercel.app/api/sendEmail",
+        {
+          method: "POST",
+          body: formData,
+        },
+      );
+      if (!response.ok) {
+        throw new Error("Erro ao enviar o email.");
+      }
+      // toast({ description: "Email enviado com sucesso" });
+      alert("Email enviado com sucesso!"); // Substituição simples para o toast
+      reset(); // Limpa o formulário após o sucesso
+    } catch (error) {
+      // toast({
+      //   title: "Email não foi enviado",
+      //   description: "Aconteceu algo de errado",
+      //   variant: "destructive",
+      // });
+      alert("Erro ao enviar o email. Por favor, tente novamente."); // Substituição simples para o toast
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
