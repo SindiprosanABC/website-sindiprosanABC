@@ -27,7 +27,7 @@ export async function POST(request: NextRequest) {
       // O 'from' deve ser um e-mail VERIFICADO no seu domínio no Resend
       from: "Contato do Site <sindiprosan-abc@sindiprosan-abc.org.br>",
       // 'to' é um array, mesmo que seja apenas um destinatário
-      to: ["sindiprosan-abc@sindiprosan-abc.org.br"], // Para o próprio cliente Sindi Prosan
+      to: ["manicucciguedes15@gmail.com"], // Para o próprio cliente Sindi Prosan
       subject: `Contato do Site - Assunto: ${category}`,
       html: `
         <h3>Novo Contato Recebido:</h3>
