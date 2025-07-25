@@ -25,7 +25,7 @@ export async function POST(request: NextRequest) {
     // Envia o e-mail usando o Resend
     const { data, error } = await resend.emails.send({
       // O 'from' deve ser um e-mail VERIFICADO no seu domínio no Resend
-      from: "Contato do Site <sindiprosan5@gmail.com>",
+      from: "Contato do Site <manicucciguedes15@gmail.com>",
       // 'to' é um array, mesmo que seja apenas um destinatário
       to: ["sindiprosan-abc@sindiprosan-abc.org.br"], // Para o próprio cliente Sindi Prosan
       subject: `Contato do Site - Assunto: ${category}`,
