@@ -51,7 +51,7 @@ export async function POST(request: NextRequest) {
       console.error("Erro ao enviar e-mail via Resend:", error);
       // Adapte a mensagem de erro conforme a necessidade
       return new Response(
-        `Erro ao enviar e-mail: ${error.message || "Erro desconhecido no envio."}`,
+        `Erro ao enviar e-mail: ${error || "Erro desconhecido no envio."}`,
         { status: 400 },
       );
     }
