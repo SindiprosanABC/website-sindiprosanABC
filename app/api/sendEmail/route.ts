@@ -1,7 +1,9 @@
-import { Resend } from "resend";
+import nodemailer from "nodemailer"; // Importa o Nodemailer
 import { NextRequest } from "next/server";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// NÃO inicialize o Nodemailer aqui fora da função
+// porque ele precisa ser criado a cada chamada para usar as variáveis de ambiente
+// ou as credenciais dinâmicas do ambiente de execução.
 
 export async function POST(request: NextRequest) {
   try {
@@ -20,17 +22,31 @@ export async function POST(request: NextRequest) {
 
     const fileArrayBuffer = await resumeFile.arrayBuffer();
     const fileBuffer = Buffer.from(fileArrayBuffer);
-    const fileBase64 = fileBuffer.toString("base64");
+    // Para Nodemailer, geralmente passamos o Buffer diretamente, não o Base64
+    // const fileBase64 = fileBuffer.toString("base64");
 
-    // Envia o e-mail usando o Resend
-    const { data, error } = await resend.emails.send({
-      // O 'from' deve ser um e-mail VERIFICADO no seu domínio no Resend
-      from: "Contato do Site <manicucciguedes15@gmail.com>",
-      // 'to' é um array, mesmo que seja apenas um destinatário
-      to: ["sindiprosan-abc@sindiprosan-abc.org.br"], // Para o próprio cliente Sindi Prosan
-      subject: `Contato do Site - Assunto: ${category}`,
+    // --- CONFIGURAÇÃO DO TRANSPORTER COM GMAIL SMTP ---
+    const transporter = nodemailer.createTransport({
+      host: "smtp.gmail.com",
+      port: 587,
+      secure: false, // false para STARTTLS na porta 587
+      auth: {
+        // Use o seu novo e-mail Gmail e a senha de app de 16 dígitos
+        user: "sindiprosan5@gmail.com", // <--- SEU NOVO EMAIL GMAIL
+        pass: process.env.GMAIL_APP_PASSWORD, // <--- Sua SENHA DE APP DO GMAIL (adicione no .env.local e Vercel)
+      },
+    });
+
+    const mailMessage = {
+      // --- REMETENTE: O novo e-mail Gmail ---
+      from: "Sindi Prosan Teste <sindiprosan5@gmail.com>",
+
+      // --- DESTINATÁRIO: O e-mail do cliente UOL Mail Pro ---
+      to: "sindiprosan-abc@sindiprosan-abc.org.br",
+
+      subject: `Contato do Site (Teste via Gmail) - Assunto: ${category}`,
       html: `
-        <h3>Novo Contato Recebido:</h3>
+        <h3>Novo Contato Recebido (Teste via Gmail):</h3>
         <ul>
           <li><strong>Nome:</strong> ${name}</li>
           <li><strong>E-mail:</strong> ${email}</li>
@@ -42,26 +58,22 @@ export async function POST(request: NextRequest) {
       attachments: [
         {
           filename: resumeFile.name,
-          content: fileBase64, // Anexo em Base64
+          content: fileBuffer, // Nodemailer aceita Buffer diretamente aqui
+          contentType: resumeFile.type,
         },
       ],
-    });
+    };
 
-    if (error) {
-      console.error("Erro ao enviar e-mail via Resend:", error);
-      // Adapte a mensagem de erro conforme a necessidade
-      return new Response(
-        `Erro ao enviar e-mail: ${error || "Erro desconhecido no envio."}`,
-        { status: 400 },
-      );
-    }
+    // --- Envia o e-mail usando o Nodemailer ---
+    await transporter.sendMail(mailMessage);
 
-    console.log("Email enviado com sucesso via Resend:", data);
+    console.log("Email enviado com sucesso (via Gmail SMTP)!");
     return new Response("Email enviado com sucesso!", { status: 200 });
   } catch (error: any) {
-    console.error("Erro geral na API:", error);
+    console.error("Erro geral na API (Nodemailer/Gmail):", error);
+    // Adapte a mensagem de erro para ser mais útil em caso de falha
     return new Response(
-      `Erro geral na API: ${error.message || "Erro desconhecido no servidor."}`,
+      `Erro ao enviar e-mail: ${error.message || "Erro desconhecido no servidor."}`,
       { status: 500 },
     );
   }
