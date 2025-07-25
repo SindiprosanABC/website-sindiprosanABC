@@ -9,6 +9,10 @@ import { LoaderCircle } from "lucide-react";
 // Caso queira usar um hook de toast, você pode descomentar esta linha e o código relacionado:
 // import { useToast } from "@/hooks/use-toast";
 
+type ContactFormProps = {
+  URL?: string;
+};
+
 type FormValues = {
   name: string;
   email: string;
@@ -18,7 +22,7 @@ type FormValues = {
   resume: FileList;
 };
 
-export const ContactForm = () => {
+export const ContactForm = ({ URL }: ContactFormProps) => {
   const {
     register,
     handleSubmit,
@@ -42,13 +46,10 @@ export const ContactForm = () => {
       formData.append("phone", data.phone);
       formData.append("message", data.message);
       formData.append("resume", data.resume[0]); // Anexa o arquivo
-      const response = await fetch(
-        "https://website-sindiprosan-abc.vercel.app/api/sendEmail",
-        {
-          method: "POST",
-          body: formData,
-        },
-      );
+      const response = await fetch(`${URL}/api/sendEmail`, {
+        method: "POST",
+        body: formData,
+      });
       if (!response.ok) {
         throw new Error("Erro ao enviar o email.");
       }

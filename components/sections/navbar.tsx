@@ -72,7 +72,7 @@ export const Navbar = () => {
 
         <div className="flex items-center gap-2">
           <Link href="/#contact">
-            <Button className="m:flex hidden bg-[#d29531] hover:bg-[#d29531]/90">
+            <Button className="hidden bg-[#d29531] hover:bg-[#d29531]/90 lg:flex">
               Associe-se
             </Button>
           </Link>
@@ -126,11 +126,6 @@ export const Navbar = () => {
                   className="border-b py-2 font-medium text-[#2e4b89] transition-colors hover:text-[#d29531]"
                 >
                   Contato
-                </Link>
-                <Link href="/#contact">
-                  <Button className="mt-4 bg-[#d29531] hover:bg-[#d29531]/90">
-                    Associe-se
-                  </Button>
                 </Link>
               </nav>
             </SheetContent>
