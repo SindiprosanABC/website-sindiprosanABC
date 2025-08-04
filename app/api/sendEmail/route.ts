@@ -44,9 +44,9 @@ export async function POST(request: NextRequest) {
       // --- DESTINATÁRIO: O e-mail do cliente UOL Mail Pro ---
       to: "sindiprosan5@gmail.com",
 
-      subject: `Contato do Site (Teste via Gmail) - Assunto: ${category}`,
+      subject: `Contato do Site sindiprosan-abc.org.br - Assunto: ${category}`,
       html: `
-        <h3>Novo Contato Recebido (Teste via Gmail):</h3>
+        <h3>Novo Contato Recebido (sindiprosan-abc.org.br):</h3>
         <ul>
           <li><strong>Nome:</strong> ${name}</li>
           <li><strong>E-mail:</strong> ${email}</li>
