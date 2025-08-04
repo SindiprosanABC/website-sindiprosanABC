@@ -9,10 +9,6 @@ import { LoaderCircle } from "lucide-react";
 // Caso queira usar um hook de toast, você pode descomentar esta linha e o código relacionado:
 // import { useToast } from "@/hooks/use-toast";
 
-type ContactFormProps = {
-  URL?: string;
-};
-
 type FormValues = {
   name: string;
   email: string;
@@ -22,7 +18,7 @@ type FormValues = {
   resume: FileList;
 };
 
-export const ContactForm = ({ URL }: ContactFormProps) => {
+export const ContactForm = () => {
   const {
     register,
     handleSubmit,
@@ -46,7 +42,7 @@ export const ContactForm = ({ URL }: ContactFormProps) => {
       formData.append("phone", data.phone);
       formData.append("message", data.message);
       formData.append("resume", data.resume[0]); // Anexa o arquivo
-      const response = await fetch(`${URL}/api/sendEmail`, {
+      const response = await fetch(`/api/sendEmail`, {
         method: "POST",
         body: formData,
       });

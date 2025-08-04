@@ -11,8 +11,6 @@ import { MemberBenefits } from "@/components/sections/memberBenefits";
 import { Stats } from "@/components/sections/stats";
 
 export default function Home() {
-  const URL = process.env.API_URL;
-
   return (
     <main className="">
       <Hero />
@@ -24,7 +22,7 @@ export default function Home() {
       <AboutUs />
       <CollectiveAgreement />
       <LatestNews />
-      <ContactForm URL={URL} />
+      <ContactForm />
       <CallToAction />
     </main>
   );
