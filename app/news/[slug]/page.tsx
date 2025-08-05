@@ -8,6 +8,7 @@ interface NewsPageProps {
 
 export default async function NewsPage({ params }: NewsPageProps) {
   const { slug } = await params;
+  console.log(slug);
 
   const news = latestNews.find((item) => item.slug === slug);
 

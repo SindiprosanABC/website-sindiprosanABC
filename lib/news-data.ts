@@ -20,6 +20,16 @@ export const latestNews: News[] = [
     cta: "Saiba mais",
   },
   {
+    slug: "estabilidade-apos-doenca-ou-acidente-de-trabalho",
+    imageSrc: "/pessoas-que-trabalham-em-equipe.jpg",
+    tag: "Proteção ao Trabalhador",
+    date: "1 de Agosto, 2025",
+    title: "Estabilidade Após Doença ou Acidente de Trabalho",
+    bodyText:
+      "Você sabia que agora não é mais necessário ter sido afastado por mais de 15 dias ou ter recebido benefício do INSS para garantir a estabilidade no emprego por 12 meses após o retorno ao trabalho ? Essa mudança representa um avanço significativo na proteção ao trabalhador, desde que haja comprovação da relação entre a doença ou acidente e as atividades exercidas no ambiente de trabalho.",
+    cta: "Saiba mais",
+  },
+  {
     slug: "conferencia-anual-uniao-setembro",
     imageSrc: "/union-meeting.jpg",
     tag: "notícias da União",

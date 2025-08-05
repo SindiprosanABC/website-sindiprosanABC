@@ -28,7 +28,7 @@ export function NewsDetail({ news }: NewsDetailProps) {
   // Get related news (excluding current news)
   const relatedNews = latestNews
     .filter((item) => item.slug !== news.slug)
-    .slice(0, 3);
+    .slice(0, 4);
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -142,6 +142,27 @@ export function NewsDetail({ news }: NewsDetailProps) {
                 </>
               )}
 
+              {news.tag === "Proteção ao Trabalhador" && (
+                <>
+                  <h2 className="mt-8 mb-4 text-2xl font-bold text-[#2e4b89]">
+                    O que diz a legislação e por que isso é importante
+                  </h2>
+                  <p className="mb-6 leading-relaxed text-gray-700">
+                    A estabilidade está prevista no artigo 118 da Lei 8.213/91 e
+                    agora pode ser aplicada mesmo nos seguintes casos: sem
+                    afastamento formal por mais de 15 dias e sem concessão de
+                    auxílio-doença acidentário (B91)
+                  </p>
+                  <p className="mb-6 leading-relaxed text-gray-700">
+                    O elemento central passa a ser a comprovação do nexo causal
+                    ou concausal, ou seja, a ligação entre o problema de saúde e
+                    o trabalho executado. Isso vale tanto para doenças
+                    ocupacionais quanto para acidentes relacionados ao exercício
+                    da função.
+                  </p>
+                </>
+              )}
+
               {news.tag === "notícias da União" && (
                 <>
                   <h2 className="mt-8 mb-4 text-2xl font-bold text-[#2e4b89]">
@@ -186,14 +207,14 @@ export function NewsDetail({ news }: NewsDetailProps) {
 
               <div className="rounded-lg bg-gray-50 p-6">
                 <h3 className="mb-3 text-lg font-semibold text-[#2e4b89]">
-                  Sobre a União dos Representantes
+                  Como o SINDIPROSAN-ABC apoia os profissionais
                 </h3>
                 <p className="text-sm text-gray-600">
-                  A União dos Representantes Farmacêuticos é uma organização
-                  dedicada a apoiar e representar os interesses dos
-                  profissionais de vendas farmacêuticas em todo o país.
-                  Oferecemos recursos, treinamentos e advocacia para nossos
-                  membros.
+                  O SINDIPROSAN-ABC atua diretamente na defesa dos profissionais
+                  da propaganda farmacêutica, nós oferecemos ações de
+                  conscientização sobre direitos trabalhistas, atendimento
+                  especializado - presencial ou via WhatsApp, apoio jurídico em
+                  casos de doença ocupacional ou acidente de trabalho...
                 </p>
               </div>
             </div>
