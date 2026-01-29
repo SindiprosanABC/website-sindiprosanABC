@@ -33,3 +33,8 @@ export async function getNewsCollection() {
   const { db } = await connectToDatabase();
   return db.collection("news_articles");
 }
+
+export async function getJobsCollection() {
+  const { db } = await connectToDatabase();
+  return db.collection("job_vacancies");
+}

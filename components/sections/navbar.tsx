@@ -57,6 +57,12 @@ export const Navbar = () => {
             Educação
           </Link>
           <Link
+            href="/vagas"
+            className="font-medium text-[#2e4b89] transition-colors hover:text-[#d29531]"
+          >
+            Vagas
+          </Link>
+          <Link
             href="/#news"
             className="font-medium text-[#2e4b89] transition-colors hover:text-[#d29531]"
           >
@@ -114,6 +120,12 @@ export const Navbar = () => {
                   className="border-b py-2 font-medium text-[#2e4b89] transition-colors hover:text-[#d29531]"
                 >
                   Educação
+                </Link>
+                <Link
+                  href="/vagas"
+                  className="border-b py-2 font-medium text-[#2e4b89] transition-colors hover:text-[#d29531]"
+                >
+                  Vagas
                 </Link>
                 <Link
                   href="/#news"
