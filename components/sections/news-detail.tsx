@@ -1,3 +1,6 @@
+'use client';
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -10,25 +13,57 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/button";
 import { Badge } from "@/components/badge";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/card";
 import { Separator } from "@/components/ui/separator";
-import { latestNews, type News } from "@/lib/news-data";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/card";
+import type { News } from "@/lib/types/news";
 
-interface NewsDetailProps {
-  news: News;
-}
+export function NewsDetail({ news }: { news: News }) {
+  const [relatedNews, setRelatedNews] = useState<News[]>([]);
 
-export function NewsDetail({ news }: NewsDetailProps) {
-  // Get related news (excluding current news)
-  const relatedNews = latestNews
-    .filter((item) => item.slug !== news.slug)
-    .slice(0, 4);
+  useEffect(() => {
+    async function fetchRelatedNews() {
+      try {
+        const response = await fetch(`/api/news?limit=3&category=${news.category || 'medicina'}`);
+        if (!response.ok) throw new Error("Failed to fetch related news");
+        const data = await response.json();
+        // Filter out current article and get only 3 related
+        const filtered = (data.news || []).filter((item: News) => item.slug !== news.slug).slice(0, 3);
+        setRelatedNews(filtered);
+      } catch (err) {
+        console.error("Error fetching related news:", err);
+      }
+    }
+    fetchRelatedNews();
+  }, [news.slug, news.category]);
+
+  const handleShare = (platform: 'facebook' | 'twitter' | 'linkedin' | 'native') => {
+    const url = typeof window !== 'undefined' ? window.location.href : '';
+    const title = news.title;
+
+    switch (platform) {
+      case 'facebook':
+        window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, '_blank', 'width=600,height=400');
+        break;
+      case 'twitter':
+        window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`, '_blank', 'width=600,height=400');
+        break;
+      case 'linkedin':
+        window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank', 'width=600,height=400');
+        break;
+      case 'native':
+        if (navigator.share) {
+          navigator.share({
+            title: title,
+            url: url,
+          }).catch((err) => console.log('Error sharing:', err));
+        } else {
+          // Fallback: copy to clipboard
+          navigator.clipboard.writeText(url);
+          alert('Link copiado para a área de transferência!');
+        }
+        break;
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -74,6 +109,8 @@ export function NewsDetail({ news }: NewsDetailProps) {
                 variant="outline"
                 size="sm"
                 className="h-8 w-8 bg-transparent p-0"
+                onClick={() => handleShare('facebook')}
+                title="Compartilhar no Facebook"
               >
                 <Facebook className="h-4 w-4" />
               </Button>
@@ -81,6 +118,8 @@ export function NewsDetail({ news }: NewsDetailProps) {
                 variant="outline"
                 size="sm"
                 className="h-8 w-8 bg-transparent p-0"
+                onClick={() => handleShare('twitter')}
+                title="Compartilhar no Twitter"
               >
                 <Twitter className="h-4 w-4" />
               </Button>
@@ -88,6 +127,8 @@ export function NewsDetail({ news }: NewsDetailProps) {
                 variant="outline"
                 size="sm"
                 className="h-8 w-8 bg-transparent p-0"
+                onClick={() => handleShare('linkedin')}
+                title="Compartilhar no LinkedIn"
               >
                 <Linkedin className="h-4 w-4" />
               </Button>
@@ -95,6 +136,8 @@ export function NewsDetail({ news }: NewsDetailProps) {
                 variant="outline"
                 size="sm"
                 className="h-8 w-8 bg-transparent p-0"
+                onClick={() => handleShare('native')}
+                title="Compartilhar"
               >
                 <Share2 className="h-4 w-4" />
               </Button>
@@ -118,90 +161,19 @@ export function NewsDetail({ news }: NewsDetailProps) {
               <p className="mb-6 text-lg leading-relaxed text-gray-700">
                 {news.bodyText}
               </p>
-
-              {/* Extended content based on news type */}
-              {news.tag === "Notícias da indústria" && (
-                <>
                   <h2 className="mt-8 mb-4 text-2xl font-bold text-[#2e4b89]">
-                    Impacto na Indústria
+                    {news.title}
                   </h2>
                   <p className="mb-6 leading-relaxed text-gray-700">
-                    Esta mudança representa um marco significativo para o setor
-                    farmacêutico. Os representantes de vendas precisarão se
-                    adaptar às novas regulamentações, que visam aumentar a
-                    transparência e melhorar a qualidade dos serviços prestados
-                    aos profissionais de saúde.
+                    {news.bodyText}
                   </p>
                   <p className="mb-6 leading-relaxed text-gray-700">
-                    Nossa união está trabalhando ativamente para fornecer
-                    orientação e recursos para ajudar nossos membros a navegar
-                    por essas mudanças com sucesso. Oferecemos treinamentos
-                    especializados e materiais informativos para garantir
-                    conformidade total.
+                    {/* content vem com html no meio */}
+                    <div
+                      className="prose max-w-none"
+                      dangerouslySetInnerHTML={{ __html: news.content }}
+                    />
                   </p>
-                </>
-              )}
-
-              {news.tag === "Proteção ao Trabalhador" && (
-                <>
-                  <h2 className="mt-8 mb-4 text-2xl font-bold text-[#2e4b89]">
-                    O que diz a legislação e por que isso é importante
-                  </h2>
-                  <p className="mb-6 leading-relaxed text-gray-700">
-                    A estabilidade está prevista no artigo 118 da Lei 8.213/91 e
-                    agora pode ser aplicada mesmo nos seguintes casos: sem
-                    afastamento formal por mais de 15 dias e sem concessão de
-                    auxílio-doença acidentário (B91)
-                  </p>
-                  <p className="mb-6 leading-relaxed text-gray-700">
-                    O elemento central passa a ser a comprovação do nexo causal
-                    ou concausal, ou seja, a ligação entre o problema de saúde e
-                    o trabalho executado. Isso vale tanto para doenças
-                    ocupacionais quanto para acidentes relacionados ao exercício
-                    da função.
-                  </p>
-                </>
-              )}
-
-              {news.tag === "notícias da União" && (
-                <>
-                  <h2 className="mt-8 mb-4 text-2xl font-bold text-[#2e4b89]">
-                    Programação do Evento
-                  </h2>
-                  <p className="mb-6 leading-relaxed text-gray-700">
-                    A conferência anual será realizada nos dias 15-17 de
-                    setembro, reunindo profissionais de todo o país. O evento
-                    contará com palestras magistrais, workshops práticos e
-                    sessões de networking.
-                  </p>
-                  <ul className="mb-6 list-disc pl-6 text-gray-700">
-                    <li>Palestras com especialistas renomados</li>
-                    <li>Workshops sobre novas técnicas de vendas</li>
-                    <li>Sessões de networking</li>
-                    <li>Apresentação de novos produtos</li>
-                  </ul>
-                </>
-              )}
-
-              {news.tag === "Membro Spotlight" && (
-                <>
-                  <h2 className="mt-8 mb-4 text-2xl font-bold text-[#2e4b89]">
-                    Estratégias de Sucesso
-                  </h2>
-                  <p className="mb-6 leading-relaxed text-gray-700">
-                    Jane Smith utilizou uma combinação de técnicas tradicionais
-                    e ferramentas digitais para alcançar resultados
-                    excepcionais. Sua abordagem focada no relacionamento com
-                    clientes e uso estratégico de dados resultou em um
-                    crescimento de 150% nas vendas.
-                  </p>
-                  <blockquote className="mb-6 border-l-4 border-[#d29531] pl-6 text-gray-600 italic">
-                    O segredo está em entender as necessidades específicas de
-                    cada cliente e oferecer soluções personalizadas. A união me
-                    forneceu as ferramentas necessárias para isso.
-                  </blockquote>
-                </>
-              )}
 
               <Separator className="my-8" />
 
@@ -222,59 +194,53 @@ export function NewsDetail({ news }: NewsDetailProps) {
 
           {/* Related News */}
           {relatedNews.length > 0 && (
-            <section>
+            <div className="mt-12">
               <h2 className="mb-6 text-2xl font-bold text-[#2e4b89]">
                 Notícias Relacionadas
               </h2>
               <div className="grid gap-6 md:grid-cols-3">
-                {relatedNews.map((relatedItem) => (
-                  <Card
-                    key={relatedItem.slug}
-                    className="pt-0 pb-6 transition-shadow hover:shadow-lg"
-                  >
+                {relatedNews.map((newsItem, index) => (
+                  <Card key={index} className="flex h-full flex-col">
                     <div className="relative h-48 w-full overflow-hidden rounded-t-lg">
                       <Image
-                        src={relatedItem.imageSrc || "/placeholder.svg"}
-                        alt={relatedItem.title}
+                        src={newsItem.imageSrc}
+                        alt={newsItem.title}
                         fill
                         className="object-cover"
                       />
                     </div>
                     <CardHeader>
                       <div className="mb-2 flex items-center justify-between">
-                        <Badge
-                          variant="outline"
-                          className="text-xs text-[#2e4b89]"
-                        >
-                          {relatedItem.tag}
+                        <Badge variant="outline" className="text-[#2e4b89]">
+                          {newsItem.tag}
                         </Badge>
-                        <span className="text-xs text-gray-500">
-                          {relatedItem.date}
+                        <span className="text-sm text-gray-500">
+                          {newsItem.date}
                         </span>
                       </div>
-                      <CardTitle className="line-clamp-2 text-lg text-[#2e4b89]">
-                        {relatedItem.title}
+                      <CardTitle className="text-[#2e4b89] line-clamp-2">
+                        {newsItem.title}
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="line-clamp-2 text-sm text-gray-600">
-                        {relatedItem.bodyText}
+                      <p className="line-clamp-3 text-gray-600">
+                        {newsItem.bodyText}
                       </p>
                     </CardContent>
-                    <CardFooter>
-                      <Link href={`/news/${relatedItem.slug}`}>
+                    <CardFooter className="mt-auto">
+                      <Link href={`/noticias/${newsItem.slug}`}>
                         <Button
                           variant="link"
                           className="h-auto p-0 text-[#d29531] hover:text-[#d29531]/80"
                         >
-                          Ler mais
+                          Saiba mais
                         </Button>
                       </Link>
                     </CardFooter>
                   </Card>
                 ))}
               </div>
-            </section>
+            </div>
           )}
         </div>
       </main>

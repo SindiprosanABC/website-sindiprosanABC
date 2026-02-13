@@ -5,9 +5,7 @@ import { CollectiveAgreement } from "@/components/sections/collective-agreement"
 import { ContactForm } from "@/components/sections/contactForm";
 import { EducationalPrograms } from "@/components/sections/educacional-programs";
 import { Hero } from "@/components/sections/hero";
-import { VacanciesJobs } from "@/components/sections/jobs-vacancies";
 import { LatestNews } from "@/components/sections/latestNews";
-import { MemberBenefits } from "@/components/sections/memberBenefits";
 import { Stats } from "@/components/sections/stats";
 
 export default function Home() {
@@ -15,8 +13,6 @@ export default function Home() {
     <main className="">
       <Hero />
       <Stats />
-      <MemberBenefits />
-      <VacanciesJobs />
       <AttentionCTA />
       <EducationalPrograms />
       <AboutUs />
