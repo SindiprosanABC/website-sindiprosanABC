@@ -1,5 +1,4 @@
-import { writeFile } from 'fs/promises';
-import { join } from 'path';
+import { put, del } from '@vercel/blob';
 import { randomBytes } from 'crypto';
 
 // Allowed MIME types for images
@@ -45,7 +44,7 @@ function generateFilename(originalName: string): string {
 }
 
 /**
- * Save uploaded file to filesystem
+ * Save uploaded file to Vercel Blob Storage
  * @param file - File object from form data
  * @returns Object with URL and filename, or error
  */
@@ -62,45 +61,45 @@ export async function saveUploadedFile(
     // Generate unique filename
     const filename = generateFilename(file.name);
 
-    // Convert file to buffer
-    const bytes = await file.arrayBuffer();
-    const buffer = Buffer.from(bytes);
-
-    // Define upload path
-    const uploadDir = join(process.cwd(), 'public', 'uploads', 'news');
-    const filePath = join(uploadDir, filename);
-
-    // Save file
-    await writeFile(filePath, buffer);
-
-    // Return public URL
-    const publicUrl = `/uploads/news/${filename}`;
+    // Upload to Vercel Blob Storage
+    const blob = await put(`news/${filename}`, file, {
+      access: 'public',
+      addRandomSuffix: false, // We handle uniqueness ourselves
+    });
 
     return {
-      url: publicUrl,
+      url: blob.url,
       filename,
     };
   } catch (error) {
-    console.error('Error saving file:', error);
+    console.error('Error uploading to Blob:', error);
     return { error: 'Erro ao salvar arquivo. Por favor, tente novamente.' };
   }
 }
 
 /**
- * Delete uploaded file from filesystem
- * @param filename - Name of file to delete
+ * Delete uploaded file from Blob Storage or filesystem (for legacy files)
+ * @param urlOrFilename - Blob URL or filename to delete
  */
-export async function deleteUploadedFile(filename: string): Promise<void> {
+export async function deleteUploadedFile(urlOrFilename: string): Promise<void> {
   try {
-    const { unlink } = await import('fs/promises');
-    const filePath = join(
-      process.cwd(),
-      'public',
-      'uploads',
-      'news',
-      filename
-    );
-    await unlink(filePath);
+    // If it's a blob URL (starts with http), use Blob API
+    if (urlOrFilename.startsWith('http')) {
+      await del(urlOrFilename);
+    }
+    // Otherwise, it's a legacy filename in the filesystem
+    else {
+      const { unlink } = await import('fs/promises');
+      const { join } = await import('path');
+      const filePath = join(
+        process.cwd(),
+        'public',
+        'uploads',
+        'news',
+        urlOrFilename
+      );
+      await unlink(filePath);
+    }
   } catch (error) {
     console.error('Error deleting file:', error);
     // Don't throw error, just log it
