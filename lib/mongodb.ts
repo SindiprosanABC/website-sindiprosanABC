@@ -15,18 +15,27 @@ export async function connectToDatabase() {
     return { client: cachedClient, db: cachedDb };
   }
 
-  const client = await MongoClient.connect(uri, {
-    maxPoolSize: 10,
-    minPoolSize: 2,
-    serverSelectionTimeoutMS: 10000,
-  });
+  try {
+    const client = new MongoClient(uri, {
+      maxPoolSize: 10,
+      minPoolSize: 2,
+      serverSelectionTimeoutMS: 10000,
+      tls: true,
+      tlsAllowInvalidCertificates: false,
+      tlsAllowInvalidHostnames: false,
+    });
 
-  const db = client.db(dbName);
+    await client.connect();
+    const db = client.db(dbName);
 
-  cachedClient = client;
-  cachedDb = db;
+    cachedClient = client;
+    cachedDb = db;
 
-  return { client, db };
+    return { client, db };
+  } catch (error) {
+    console.error("MongoDB connection error:", error);
+    throw error;
+  }
 }
 
 export async function getNewsCollection() {
@@ -37,4 +46,14 @@ export async function getNewsCollection() {
 export async function getJobsCollection() {
   const { db } = await connectToDatabase();
   return db.collection("job_vacancies");
+}
+
+export async function getAdminUsersCollection() {
+  const { db } = await connectToDatabase();
+  return db.collection("admin_users");
+}
+
+export async function getTagsCollection() {
+  const { db } = await connectToDatabase();
+  return db.collection("news_tags");
 }

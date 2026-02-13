@@ -102,12 +102,12 @@ export const LatestNews = () => {
                       </p>
                     </CardContent>
                     <CardFooter className="mt-auto">
-                      <Link href={`${newsItem.url}`} target="_blank" rel="noopener noreferrer">
+                      <Link href={`/noticias/${newsItem.slug}`}>
                         <Button
                           variant="link"
                           className="h-auto p-0 text-[#d29531] hover:text-[#d29531]/80"
                         >
-                          {newsItem.cta}
+                          Saiba mais
                         </Button>
                       </Link>
                     </CardFooter>
