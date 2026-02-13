@@ -56,18 +56,18 @@ export const Navbar = () => {
           >
             Educação
           </Link>
-          <Link
+          {/* <Link
             href="/vagas"
             className="font-medium text-[#2e4b89] transition-colors hover:text-[#d29531]"
           >
             Vagas
-          </Link>
-          <Link
+          </Link> */}
+          {/* <Link
             href="/#news"
             className="font-medium text-[#2e4b89] transition-colors hover:text-[#d29531]"
           >
             Notícias
-          </Link>
+          </Link> */}
           <Link
             href="/#contact"
             className="font-medium text-[#2e4b89] transition-colors hover:text-[#d29531]"
