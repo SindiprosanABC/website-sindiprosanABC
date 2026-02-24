@@ -17,7 +17,7 @@ export default function Home() {
       <EducationalPrograms />
       <AboutUs />
       <CollectiveAgreement />
-      {/* <LatestNews /> */}
+      <LatestNews />
       <ContactForm />
       <CallToAction />
     </main>
