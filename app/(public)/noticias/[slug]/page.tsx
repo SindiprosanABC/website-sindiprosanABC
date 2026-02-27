@@ -1,34 +1,15 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { NewsDetail } from '@/components/sections/news-detail';
+import { getNewsArticleBySlug } from '@/lib/news-queries';
 
 type Props = {
   params: Promise<{ slug: string }>;
 };
 
-async function getNewsArticle(slug: string) {
-  try {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-    const response = await fetch(`${baseUrl}/api/news?slug=${slug}`, {
-      cache: 'no-store',
-    });
-    console.log('[NewsDetail Page] API response status:', response.status, 'for slug:', slug);
-
-    if (!response.ok) {
-      return null;
-    }
-
-    const data = await response.json();
-    return data.news;
-  } catch (error) {
-    console.error('Error fetching news article:', error);
-    return null;
-  }
-}
-
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const article = await getNewsArticle(slug);
+  const article = await getNewsArticleBySlug(slug);
 
   if (!article) {
     return {
@@ -36,14 +17,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://sindiprosan.com.br';
 
   return {
     title: `${article.title} | SINDIPROSAN-ABC`,
-    description: article.bodyText || article.description,
+    description: article.bodyText,
     openGraph: {
       title: article.title,
-      description: article.bodyText || article.description,
+      description: article.bodyText,
       images: [
         {
           url: article.imageSrc.startsWith('http')
@@ -55,12 +36,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         },
       ],
       type: 'article',
-      publishedTime: article.publishedAt,
     },
     twitter: {
       card: 'summary_large_image',
       title: article.title,
-      description: article.bodyText || article.description,
+      description: article.bodyText,
       images: [
         article.imageSrc.startsWith('http')
           ? article.imageSrc
@@ -72,8 +52,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function NewsDetailPage({ params }: Props) {
   const { slug } = await params;
-  const article = await getNewsArticle(slug);
-  console.log('[NewsDetail Page] Fetched article:', article ? article.title : 'null');
+  const article = await getNewsArticleBySlug(slug);
 
   if (!article) {
     notFound();

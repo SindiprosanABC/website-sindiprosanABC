@@ -11,6 +11,7 @@ import {
 } from "@/lib/validations/news";
 import { generateSlug } from "@/utils/slug-generator";
 import { formatDatePortuguese } from "@/utils/date-formatter";
+import { getNewsArticleBySlug } from "@/lib/news-queries";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -31,41 +32,32 @@ export async function GET(request: NextRequest) {
 
     // Get single article by slug
     if (slug) {
-      console.log('[API] Fetching article with slug:', slug);
-
-      const article = await collection.findOne({
-        slug,
-        ...(all ? {} : { isActive: true }),
-      });
-
-      console.log('[API] Article found:', article ? 'yes' : 'no');
-
-      if (!article) {
-        console.log('[API] Article not found for slug:', slug);
-        return NextResponse.json(
-          { error: "Article not found" },
-          { status: 404 },
-        );
-      }
-
-      // Transform MongoDB document to News type
-      const news: News = {
-        slug: article.slug,
-        imageSrc: article.imageSrc,
-        tag: article.tag,
-        date: article.date,
-        title: article.title,
-        bodyText: article.bodyText || article.description,
-        cta: article.cta,
-        content: article.content,
-        category: article.category,
-        source: article.source,
-        author: article.author,
-        url: article.url,
-      };
-
-      // Include admin fields if requested
       if (all) {
+        // Admin view: fetch raw document to include extra fields
+        const article = await collection.findOne({ slug });
+
+        if (!article) {
+          return NextResponse.json(
+            { error: "Article not found" },
+            { status: 404 },
+          );
+        }
+
+        const news: News = {
+          slug: article.slug,
+          imageSrc: article.imageSrc,
+          tag: article.tag,
+          date: article.date,
+          title: article.title,
+          bodyText: article.bodyText || article.description,
+          cta: article.cta,
+          content: article.content,
+          category: article.category,
+          source: article.source,
+          author: article.author,
+          url: article.url,
+        };
+
         return NextResponse.json({
           news: {
             ...news,
@@ -75,6 +67,16 @@ export async function GET(request: NextRequest) {
             description: article.description,
           },
         });
+      }
+
+      // Public view: use shared query function
+      const news = await getNewsArticleBySlug(slug);
+
+      if (!news) {
+        return NextResponse.json(
+          { error: "Article not found" },
+          { status: 404 },
+        );
       }
 
       return NextResponse.json({ news });
