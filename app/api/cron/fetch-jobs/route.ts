@@ -65,8 +65,22 @@ export async function GET(request: NextRequest) {
       });
     }
 
+    // Filtrar apenas vagas das regiões-alvo
+    const TARGET_LOCATIONS = /Santo André|São Bernardo|São Caetano|Diadema|Mauá|Ribeirão Pires|Rio Grande da Serra|Santos|São Vicente|Guarujá|Cubatão|Praia Grande|Bertioga|Itanhaém|Mongaguá|Peruíbe|Caraguatatuba|Ubatuba|São Sebastião|Ilhabela/i;
+    const filteredJobs = allJobs.filter((job) =>
+      job.location && TARGET_LOCATIONS.test(job.location)
+    );
+
+    if (filteredJobs.length === 0) {
+      return NextResponse.json({
+        success: true,
+        message: "No jobs found for target regions",
+        count: 0,
+      });
+    }
+
     // Transform jobs
-    const transformedJobs = transformBatchJobs(allJobs);
+    const transformedJobs = transformBatchJobs(filteredJobs);
 
     // Store in MongoDB
     const collection = await getJobsCollection();
@@ -87,6 +101,12 @@ export async function GET(request: NextRequest) {
         },
       };
     });
+
+    // Desativar vagas fora das regiões-alvo que já estavam no banco
+    await collection.updateMany(
+      { isActive: true, location: { $not: TARGET_LOCATIONS } },
+      { $set: { isActive: false, updatedAt: new Date() } },
+    );
 
     const result = await collection.bulkWrite(bulkOps);
 

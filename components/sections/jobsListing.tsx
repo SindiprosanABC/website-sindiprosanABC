@@ -8,7 +8,11 @@ import { MapPin, Loader2, Building } from "lucide-react";
 import type { Job } from "@/lib/types/jobs";
 import Link from "next/link";
 
-export const JobsListing = () => {
+interface JobsListingProps {
+  locationFilter?: string | null;
+}
+
+export const JobsListing = ({ locationFilter = null }: JobsListingProps) => {
   const [jobs, setJobs] = useState<Job[]>([]);
   const [loading, setLoading] = useState(true);
   const [loadingMore, setLoadingMore] = useState(false);
@@ -27,7 +31,13 @@ export const JobsListing = () => {
         setLoading(true);
       }
 
-      const response = await fetch(`/api/jobs?limit=20&page=${pageNum}&category=medicina`);
+      const url = new URL("/api/jobs", window.location.origin);
+      url.searchParams.set("limit", "20");
+      url.searchParams.set("page", String(pageNum));
+      url.searchParams.set("category", "medicina");
+      if (locationFilter) url.searchParams.set("location", locationFilter);
+
+      const response = await fetch(url.toString());
       if (!response.ok) throw new Error("Failed to fetch jobs");
 
       const data = await response.json();
@@ -50,11 +60,12 @@ export const JobsListing = () => {
       setLoading(false);
       setLoadingMore(false);
     }
-  }, []);
+  }, [locationFilter]);
 
   useEffect(() => {
+    pageRef.current = 1;
     fetchJobs(1, false);
-  }, [fetchJobs]);
+  }, [fetchJobs, locationFilter]);
 
   // Infinite scroll observer
   useEffect(() => {
