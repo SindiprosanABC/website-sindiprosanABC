@@ -35,7 +35,7 @@ export function transformSerpApiJob(
 
   // Gerar slug único baseado em empresa + título + jobId
   const slugBase = `${job.company_name}-${job.title}`;
-  const slug = `${generateSlug(slugBase)}-${jobId.substring(0, 8)}`;
+  const slug = `${generateSlug(slugBase)}-${jobId.substring(0, 16)}`;
 
   // Extrair data de publicação
   const postedAt = job.detected_extensions?.posted_at || "";
